@@ -89,7 +89,7 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
   };
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-64 bg-stone-800 border-r border-zinc-800 flex flex-col shadow-2xl">
+    <aside className="hidden md:fixed md:left-0 md:top-0 md:h-screen md:w-64 md:flex md:flex-col bg-zinc-800 border-r border-zinc-800 shadow-2xl">
       {/* Header */}
       <div className="p-6 border-b border-zinc-800">
         <div className="flex items-center gap-3">
