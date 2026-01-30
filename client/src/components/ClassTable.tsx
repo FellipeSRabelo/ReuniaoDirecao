@@ -18,28 +18,11 @@ export default function ClassTable({ data }: ClassTableProps) {
       {data.map((section) => (
         <div key={section.name} className="bg-slate-900/50 rounded-lg overflow-hidden shadow-sm">
           {/* Section Header */}
-          <div className="bg-slate-800 px-6 py-4 border-b border-slate-700">
+          <div className="bg-zinc-800 px-6 py-4 border-b border-zinc-700">
             <h3 className="text-lg font-semibold text-slate-50">
               {section.name}
             </h3>
-            <div className="grid grid-cols-4 gap-4 mt-3 text-sm">
-              <div>
-                <p className="text-slate-400 text-xs">Total de Turmas</p>
-                <p className="font-bold text-slate-50">{section.totalClasses}</p>
-              </div>
-              <div>
-                <p className="text-slate-400 text-xs">Total de Alunos</p>
-                <p className="font-bold text-slate-50">{section.totalStudents}</p>
-              </div>
-              <div>
-                <p className="text-slate-400 text-xs">Masculino</p>
-                <p className="font-bold text-slate-50">{section.maleTotal}</p>
-              </div>
-              <div>
-                <p className="text-slate-400 text-xs">Feminino</p>
-                <p className="font-bold text-slate-50">{section.femaleTotal}</p>
-              </div>
-            </div>
+            
           </div>
 
           {/* Table */}
@@ -47,25 +30,25 @@ export default function ClassTable({ data }: ClassTableProps) {
             <Table>
               <TableHeader>
                 <TableRow className="border-b border-slate-700 hover:bg-transparent">
-                  <TableHead className="text-slate-400 font-semibold">
+                  <TableHead className="text-black font-bold">
                     Turma
                   </TableHead>
-                  <TableHead className="text-slate-400 font-semibold">
+                  <TableHead className="text-black font-bold">
                     Turno
                   </TableHead>
-                  <TableHead className="text-slate-400 font-semibold">
+                  <TableHead className="text-black font-bold">
                     Sala
                   </TableHead>
-                  <TableHead className="text-right text-slate-400 font-semibold">
+                  <TableHead className="text-right text-black font-bold">
                     Total
                   </TableHead>
-                  <TableHead className="text-right text-slate-400 font-semibold">
+                  <TableHead className="text-right text-black font-bold">
                     Masc.
                   </TableHead>
-                  <TableHead className="text-right text-slate-400 font-semibold">
+                  <TableHead className="text-right text-black font-bold">
                     Fem.
                   </TableHead>
-                  <TableHead className="text-right text-slate-400 font-semibold">
+                  <TableHead className="text-right text-black font-bold">
                     Outros
                   </TableHead>
                 </TableRow>
@@ -76,25 +59,25 @@ export default function ClassTable({ data }: ClassTableProps) {
                     key={idx}
                     className="border-b border-slate-700 hover:bg-slate-800/50 transition-colors"
                   >
-                    <TableCell className="font-medium text-slate-50">
+                    <TableCell className="font-medium text-black">
                       {cls.course}
                     </TableCell>
-                    <TableCell className="text-slate-50">
+                    <TableCell className="font-medium text-black">
                       {cls.shift}
                     </TableCell>
-                    <TableCell className="text-slate-50">
+                    <TableCell className="font-medium text-black">
                       {cls.classroom}
                     </TableCell>
-                    <TableCell className="text-right font-semibold text-slate-50">
+                    <TableCell className="font-medium text-black">
                       {cls.totalStudents}
                     </TableCell>
-                    <TableCell className="text-right text-slate-50">
+                    <TableCell className="font-medium text-black">
                       {cls.male}
                     </TableCell>
-                    <TableCell className="text-right text-slate-50">
+                    <TableCell className="font-medium text-black">
                       {cls.female}
                     </TableCell>
-                    <TableCell className="text-right text-slate-50">
+                    <TableCell className="font-medium text-black">
                       {cls.others}
                     </TableCell>
                   </TableRow>

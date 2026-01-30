@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BarChart3, FileText, Home, Users, ChevronDown, BookOpen, Scale, GraduationCap, Calendar, Smartphone, SmartphoneIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -25,10 +25,10 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
       icon: Users,
       submenu: [
         { id: "overview", label: "Visão Geral" },
+        { id: "rematriculation", label: "Rematrícula" },
         { id: "new-students", label: "Alunos Novos" },
         { id: "total-students", label: "Total de Alunos" },
-        { id: "rematriculation", label: "Rematrícula" },
-        { id: "documents", label: "Documentos" },
+        
       ],
     },
     {
@@ -64,14 +64,25 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
       ],
     },
     {
-      id: "inicio",
+      id: "novo-app",
       label: "Novo APP TI",
       icon: Smartphone,
       submenu: [
-        { id: "novo-app-ti", label: "Novo APP TI" },
+        { id: "novo-app-ti", label: "Vídeo Demonstração" },
       ],
     },
   ];
+
+  // Encontrar o menu pai de um submenu item baseado no activeTab
+  useEffect(() => {
+    const parentMenu = navItems.find(item => 
+      item.submenu?.some(sub => sub.id === activeTab)
+    );
+    
+    if (parentMenu && expandedMenu !== parentMenu.id) {
+      setExpandedMenu(parentMenu.id);
+    }
+  }, [activeTab]);
 
   const toggleMenu = (menuId: string) => {
     setExpandedMenu(expandedMenu === menuId ? null : menuId);

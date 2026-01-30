@@ -23,15 +23,15 @@ export default function StatCard({
   };
 
   return (
-    <div className={`bg-slate-900/50 border border-slate-800 border-l-4 ${variantStyles[variant]} rounded-lg p-6 shadow-xl hover:shadow-2xl hover:bg-slate-900/70 transition-all duration-300`}>
+    <div className={`bg-zinc-800 border border-l-6 ${variantStyles[variant]} rounded-lg p-6 shadow-2xl hover:shadow-4xl hover:bg-slate-800 transition-all duration-300`}>
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          <p className="text-sm font-medium text-slate-400 mb-2">
+          <p className="text-sm font-medium text-slate-200 mb-2">
             {title}
           </p>
-          <p className="text-3xl font-bold text-slate-50">{value}</p>
+          <p className="text-3xl font-bold text-white">{value}</p>
           {subtitle && (
-            <p className="text-xs text-slate-500 mt-2">{subtitle}</p>
+            <p className="text-xs text-slate-300 mt-2">{subtitle}</p>
           )}
         </div>
         {Icon && (
