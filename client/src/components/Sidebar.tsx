@@ -58,9 +58,9 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
       label: "Primeiro dia de aula",
       icon: Calendar,
       submenu: [
-        { id: "alunos-novos-primeiro-dia", label: "Alunos novos" },
         { id: "matutino", label: "Matutino" },
         { id: "vespertino", label: "Vespertino" },
+        { id: "alunos-novos-primeiro-dia", label: "Alunos novos" },
       ],
     },
   ];
