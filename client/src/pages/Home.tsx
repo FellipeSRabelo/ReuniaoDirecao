@@ -448,47 +448,101 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
           </div>
 
           <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl">
-            <h3 className="text-4xl text-center font-bold text-white mb-4 tracking-tight">Eventos de 2026</h3>
-            <p className="text-md text-center text-white/90 mb-8">Para cada evento deverá ser elaborado um projeto. Após o evento deverá ser feita a prestação de contas.</p>
+            <h3 className="text-3xl font-bold text-white mb-4">13. Eventos de 2026</h3>
+            <p className="text-white/90 mb-6">Para cada evento deverá ser elaborado um projeto. Após o evento deverá ser feita a prestação de contas.</p>
             
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h4 className="text-xl font-bold text-white mb-4 border-b border-white/30 pb-2">1º Semestre</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                  <div className="space-y-2">
-                    <p className="text-white/90"><span className="text-white font-bold">02/04:</span> Retiro dos funcionários</p>
-                    <p className="text-white/90"><span className="text-white font-bold">22-24/04:</span> Semana Literária</p>
-                    <p className="text-white/90"><span className="text-white font-bold">25/04:</span> Encontro Movimento Reparação - Matutino</p>
-                    <p className="text-white/90"><span className="text-white font-bold">04-07/05:</span> Homenagem as mães</p>
-                    <p className="text-white/90"><span className="text-white font-bold">09/05:</span> Dia das Mães no cinema</p>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="text-white/90"><span className="text-white font-bold">19/06:</span> Festa Junina (Fund. II e E.M.)</p>
-                    <p className="text-white/90"><span className="text-white font-bold">04/07:</span> JICEA (S2)</p>
-                    <p className="text-white/90"><span className="text-white font-bold">11/07:</span> JICEA (S2)</p>
-                    <p className="text-white/90"><span className="text-white font-bold">12/07:</span> Festa Junina (Infantil e Fund. I) - Arena Opus</p>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <ul className="space-y-2 text-white/90 text-sm">
+                <li><strong>02/04:</strong> Retiro dos funcionários: (Josiane / Equipe SOR / Direção)</li>
+                <li><strong>22/04 até 24/04:</strong> Semana Literária (Coordenações e Direção)</li>
+                <li><strong>25/04:</strong> Encontro Movimento Reparação – Matutino (Equipe SOR / Disciplina / Josiane / Direção)</li>
+                <li><strong>04/05 e 05/05:</strong> Homenagem as mães Infantil: (Coord. Simone e Direção)</li>
+                <li><strong>04/05 até 07/05:</strong> Homenagem as mães Fundamental I: (Coord. Andréia e Direção)</li>
+                <li><strong>09/05:</strong> Dia das Mães no cinema (Coordenadora Carol e Direção)</li>
+                <li><strong>19/06:</strong> Festa Junina (Fund. II e Ensino Médio): Colégio Elisa Andreoli (Coord. Fund. II e E.M. / Direção)</li>
+                <li><strong>04/07:</strong> JICEA (Coord. Carlos, Fernando e Carol) / (S2)</li>
+                <li><strong>11/07:</strong> JICEA (Coord. Carlos, Fernando e Carol) / (S2)</li>
+                <li><strong>12/07:</strong> Aniversário de fundação da Congregação das SMR (Direção)</li>
+                <li><strong>12/07:</strong> Festa Junina (Infantil e Fund. I): Arena Opus (Coord. Simone e Andréia / Direção)</li>
+                <li><strong>03/08 e 04/08:</strong> homenagem aos pais (Coord. Simone e Direção)</li>
+                <li><strong>03/08 até 06/08:</strong> homenagem aos pais (Coord. Andréia e Direção)</li>
+                <li><strong>11/08:</strong> Dia do estudante (Direção)</li>
+                <li><strong>11/08:</strong> Missa Arquidiocesana pelos estudantes</li>
+                <li><strong>15/08:</strong> Dia dos pais no cinema</li>
+                <li><strong>04/09:</strong> Homenagem cívica (Especial) Dia da Independência: Fund. I e Ed. Infantil</li>
+                <li><strong>08/09:</strong> Dia da Educação SMR (Rede SMR)</li>
+                <li><strong>15/09:</strong> Missa Nossa Senhora das Dores: (Equipe SOR)</li>
+                <li><strong>26/09:</strong> Movimento e Ação – Encontro Movimento Reparação (Equipe SOR)</li>
+                <li><strong>07/10 até 09/10:</strong> Criança Fest (Coord. Simone, Andréia e Carlos)</li>
+                <li><strong>____________:</strong> Jantar dos Professores (Direção)</li>
+                <li><strong>06/11:</strong> Noite da Pizza – Movimento Reparação</li>
+                <li><strong>08/12:</strong> Missa de formatura Terceirão: Paróquia Sagrados Corações (SOR)</li>
+                <li><strong>11/12:</strong> Missa de formatura 9º ano: Paróquia Sagrados Corações (SOR)</li>
+                <li><strong>14/12:</strong> Formatura 9º ano (Coord. e Direção)</li>
+                <li><strong>15/12:</strong> Formatura Terceirão (Coord. e Direção)</li>
+                <li><strong>16/12:</strong> Festa de Natal Turmas do Infantil - I e II (Coord. e Direção)</li>
+                <li><strong>17/12:</strong> Encerramento Turmas do Infantil – III (Coord. e Direção)</li>
+                <li><strong>______:</strong> Confraternização de fim de ano (Direção)</li>
+              </ul>
+            </div>
+          </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h4 className="text-xl font-bold text-white mb-4 border-b border-white/30 pb-2">2º Semestre</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                  <div className="space-y-2">
-                    <p className="text-white/90"><span className="text-white font-bold">03-06/08:</span> Homenagem aos pais</p>
-                    <p className="text-white/90"><span className="text-white font-bold">11/08:</span> Dia do estudante</p>
-                    <p className="text-white/90"><span className="text-white font-bold">15/08:</span> Dia dos pais no cinema</p>
-                    <p className="text-white/90"><span className="text-white font-bold">04/09:</span> Homenagem cívica - Dia da Independência</p>
-                    <p className="text-white/90"><span className="text-white font-bold">15/09:</span> Missa Nossa Senhora das Dores</p>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="text-white/90"><span className="text-white font-bold">26/09:</span> Movimento e Ação</p>
-                    <p className="text-white/90"><span className="text-white font-bold">07-09/10:</span> Criança Fest</p>
-                    <p className="text-white/90"><span className="text-white font-bold">06/11:</span> Noite da Pizza - Movimento Reparação</p>
-                    <p className="text-white/90"><span className="text-white font-bold">14-16/12:</span> Formaturas e Festa de Natal</p>
-                  </div>
-                </div>
-              </div>
+          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">14. Setor de Psicologia / Psicopedagogia - Inclusão</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <p className="text-white/90 mb-4">Em 2026, permanece duas frente da Psicologia / Psicopedagogia - Inclusão:</p>
+              <ul className="space-y-2 text-white/90 list-disc list-inside">
+                <li><strong>Letícia:</strong> Questões emocionais</li>
+                <li><strong>Alessandra / Glaucia / Denise:</strong> Inclusão</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">15. Projetos 2026</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <p className="text-white/90 mb-4">Todos os projetos deverão possuir registro fotográfico e avaliação, que deverão ser entregues à Direção Pedagógica após a sua realização.</p>
+              <ul className="space-y-2 text-white/90 list-disc list-inside">
+                <li><strong>Travessia:</strong> Josiane, Carol e Fernando</li>
+                <li><strong>Bulling:</strong> Myrna / Silvana</li>
+                <li><strong>Juntos pela vida:</strong> Fernando / Josiane / Silvana</li>
+                <li><strong>Líderes:</strong> Coordenadores / Líder em Mim</li>
+                <li><strong>Sexualidade:</strong> Ed. Física e Coordenações</li>
+                <li><strong>A prevenção da violência contra a mulher:</strong> FHCR</li>
+                <li><strong>Orientação Vocacional:</strong> Letícia / Myrna / Fernando</li>
+                <li><strong>Projeto Sentir:</strong> Direção / Carol</li>
+                <li><strong>Pais na Escola:</strong> Direção</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">16. Encaminhamentos: Serviços Social, Psicologia e Psicopedagogia</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <p className="text-white/90 mb-4">Os alunos encaminhados à Assistente Social e aos Setores de Psicologia e Psicopedagogia deverão ter autorização da Direção. Os coordenadores deverão solicitar à Assistente Social a relação de bolsistas (doc. Sigiloso).</p>
+              <p className="text-white font-bold mb-4">IMPORTANTE: OS SETORES SÓ PODERÃO ATENDER MEDIANTE O PROTOCOLO ASSINADO PELA DIREÇÃO PEDAGÓGICA.</p>
+              <p className="text-white/90 italic">Obs.: Os especialistas deverão criar uma planilha onde deverão registrar e acompanhar todos os atendimentos. A planilha deverá ser compartilhada com as Coordenações e Direção.</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">17. Reuniões Pedagógicas</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <p className="text-white/90">Nas segundas-feiras, às 9h, acontecerá as reuniões Pedagógicas.</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">18. Reunião Setor de Inclusão e Psicologia</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <p className="text-white/90">O Setor de Inclusão e Psicologia fará reunião todas as terças-feiras, às 9h.</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">19. Reunião de Gestores</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <p className="text-white/90">Nas quartas-feiras, acontecerá nossa reunião de gestores será às 14h.</p>
             </div>
           </div>
 
