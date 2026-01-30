@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BarChart3, FileText, Home, Users, ChevronDown, BookOpen, Scale, GraduationCap, Calendar } from "lucide-react";
+import { BarChart3, FileText, Home, Users, ChevronDown, BookOpen, Scale, GraduationCap, Calendar, Smartphone, SmartphoneIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SidebarProps {
@@ -63,6 +63,14 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         { id: "alunos-novos-primeiro-dia", label: "Alunos novos" },
       ],
     },
+    {
+      id: "inicio",
+      label: "Novo APP TI",
+      icon: Smartphone,
+      submenu: [
+        { id: "novo-app-ti", label: "Novo APP TI" },
+      ],
+    },
   ];
 
   const toggleMenu = (menuId: string) => {
@@ -70,18 +78,18 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
   };
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-64 bg-sidebar border-r border-sidebar-border flex flex-col">
+    <aside className="fixed left-0 top-0 h-screen w-64 bg-stone-800 border-r border-zinc-800 flex flex-col shadow-2xl">
       {/* Header */}
-      <div className="p-6 border-b border-sidebar-border">
+      <div className="p-6 border-b border-zinc-800">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded bg-sidebar-primary flex items-center justify-center">
-            <BarChart3 className="w-6 h-6 text-sidebar-primary-foreground" />
+          <div className="w-10 h-10 rounded-lg bg-blue-400 flex items-center justify-center shadow-lg">
+            <BarChart3 className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="text-sm font-bold text-sidebar-foreground">
+            <h1 className="text-sm font-bold text-stone-50">
               Coordenação
             </h1>
-            <p className="text-xs text-muted-foreground">Elisa Andreoli</p>
+            <p className="text-xs text-white">Elisa Andreoli</p>
           </div>
         </div>
       </div>
@@ -99,10 +107,10 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
                 <button
                   onClick={() => toggleMenu(item.id)}
                   className={cn(
-                    "w-full flex items-center justify-between px-4 py-3 rounded-md transition-all duration-200",
+                    "w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200",
                     isExpanded
-                      ? "bg-sidebar-primary text-sidebar-primary-foreground font-medium"
-                      : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                      ? "bg-blue-500 text-white font-medium shadow-lg"
+                      : "text-zinc-50 hover:bg-blue-500 hover:text-zinc-50"
                   )}
                 >
                   <div className="flex items-center gap-3">
@@ -119,16 +127,16 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
 
                 {/* Submenu */}
                 {isExpanded && (
-                  <div className="ml-4 mt-1 space-y-1 border-l border-sidebar-border">
+                  <div className="ml-4 mt-1 space-y-1 border-l border-zinc-700">
                     {item.submenu.map((subitem) => (
                       <button
                         key={subitem.id}
                         onClick={() => onTabChange(subitem.id)}
                         className={cn(
-                          "w-full flex items-center gap-3 px-4 py-2 rounded-md text-sm transition-all duration-200 pl-6",
+                          "w-full flex items-center gap-3 px-4 py-2 rounded-lg text-sm transition-all duration-200 pl-6",
                           activeTab === subitem.id
-                            ? "bg-sidebar-primary text-sidebar-primary-foreground font-medium"
-                            : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                            ? "bg-blue-500 text-white font-medium shadow-md"
+                            : "text-zinc-50 hover:bg-blue-500 hover:text-zinc-200"
                         )}
                       >
                         <div className="w-1.5 h-1.5 rounded-full bg-current" />
@@ -160,11 +168,11 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-sidebar-border">
-        <p className="text-xs text-muted-foreground text-center">
+      <div className="p-4 border-t border-zinc-800 bg-zinc-900/50">
+        <p className="text-xs text-zinc-500 text-center">
           Período: 2026 - 1º Semestre
         </p>
-        <p className="text-xs text-muted-foreground text-center mt-1">
+        <p className="text-xs text-zinc-500 text-center mt-1">
           Atualizado: 28/01/2026
         </p>
       </div>

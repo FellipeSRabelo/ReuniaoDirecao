@@ -17,6 +17,7 @@ import {
   Download,
   FileText,
   ExternalLink,
+  Divide,
 } from "lucide-react";
 
 /**
@@ -85,18 +86,18 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen bg-slate-900">
+    <div className="flex h-screen bg-blue-800">
       {/* Sidebar */}
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Main Content */}
-      <main className="ml-64 flex-1 overflow-auto relative">
-        {/* Logo no canto superior direito */}
-        <div className="fixed top-6 right-8 z-10">
+      <main className="ml-64 flex-1 overflow-auto relative bg-stone-300">
+        {/* Logo centralizada no topo */}
+        <div className="flex justify-center pt-6 pb-4 border-b border-stone-500/50">
           <img
             src="https://elisaandreoli.com.br/wp-content/uploads/2023/08/logomarca_cea_sem_fundo.png"
             alt="Colégio Elisa Andreoli"
-            className="h-12 w-auto object-contain"
+            className="h-16 w-auto object-contain brightness-110"
           />
         </div>
 
@@ -113,40 +114,40 @@ function PautaTab() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold text-foreground mb-2">
+        <h1 className="text-4xl font-bold text-stone-950 mb-2">
           1ª Reunião Pedagógica
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-stone-950">
           03 de Fevereiro de 2026 • Colégio Elisa Andreoli
         </p>
       </div>
 
-      <div className="bg-card rounded-lg p-8 border border-border prose prose-invert max-w-none">
-        <div className="mb-8 text-center italic border-l-4 border-primary pl-6 py-4">
-          <p className="text-lg text-foreground">
+      <div className="bg-stone-800 rounded-lg p-8 border border-stone-800 prose prose-invert max-w-none shadow-xl">
+        <div className="mb-8 text-center italic border-l-4 border-zinc-600 pl-6 py-4 bg-stone-900/30 rounded-r">
+          <p className="text-lg text-stone-200">
             "Ensinar é um exercício de imortalidade. De alguma forma continuamos a viver
             naqueles cujos olhos aprenderam a ver o mundo pela magia da nossa palavra.
             O professor, assim, não morre jamais."
           </p>
-          <p className="text-sm text-muted-foreground mt-2">— Rubem Alves</p>
+          <p className="text-sm text-stone-400 mt-2">— Rubem Alves</p>
         </div>
 
         <div className="space-y-6">
           <div>
-            <p className="text-muted-foreground"><strong>Data:</strong> 03/02/2026</p>
-            <p className="text-muted-foreground"><strong>Horário:</strong> 9h</p>
+            <p className="text-stone-300"><strong className="text-stone-50">Data:</strong> 03/02/2026</p>
+            <p className="text-stone-300"><strong className="text-stone-50">Horário:</strong> 9h</p>
           </div>
 
           <div>
-            <ul className="list-disc list-inside space-y-2 text-foreground">
+            <ul className="list-disc list-inside space-y-2 text-stone-300">
               <li>Oração e Reflexão (Capela)</li>
               <li>Avaliação do ano anterior</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Objetivo Geral da nossa reunião:</h3>
-            <p className="text-foreground">
+            <h3 className="text-xl font-semibold text-stone-50 mb-3">Objetivo Geral da nossa reunião:</h3>
+            <p className="text-stone-300">
               Promover a formação integral dos alunos por meio da implementação de práticas educacionais que integrem valores católicos, 
               desenvolvimento acadêmico e social, fortalecendo a identidade da escola como uma instituição confessional.
             </p>
@@ -253,56 +254,139 @@ function PautaTab() {
             </ul>
           </div>
 
-          <div className="bg-slate-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-foreground mb-3">Semana Pedagógica 2026</h3>
+          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl">
+            <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">Semana Pedagógica 2026</h3>
             
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-primary mb-2">04/02 (QUARTA-FEIRA) - PERÍODO MATUTINO</h4>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li><strong>8h:</strong> Celebração Eucarística (Igreja São Judas Tadeu)</li>
-                  <li><strong>9h30min:</strong> Coquetel</li>
-                  <li><strong>10h30min:</strong> Boas-vindas Direção</li>
-                  <li><strong>11h:</strong> Ir. Valdete - Tema: Campanha da Fraternidade 2026</li>
+            <div className="space-y-8">
+              {/* Quarta-feira Manhã */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">04/02 (QUARTA-FEIRA) - PERÍODO MATUTINO</h4>
+                <ul className="space-y-2 text-white/90 ml-4">
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">8h:</span> <span>Celebração Eucarística (Igreja São Judas Tadeu)</span></li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">9h30min:</span> <span>Coquetel</span></li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">10h30min:</span> <span>Boas-vindas Direção</span></li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">11h:</span> <span>Ir. Valdete</span></li>
+                </ul>
+
+                {/* Palestrante Ir. Valdete */}
+                <div className="mt-6 bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="flex-shrink-0">
+                      <img 
+                        src="https://elisaandreoli.com.br/wp-content/uploads/2026/01/valdete.jpg" 
+                        alt="Ir. Valdete"
+                        className="w-48 h-48 rounded-lg object-cover shadow-xl border-4 border-white/20"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h5 className="text-xl font-bold text-yellow-300 mb-2">Tema da Palestra: Campanha da Fraternidade 2026</h5>
+                      <p className="text-white/90 text-sm leading-relaxed">
+                        A Irmã Valdete é Religiosa da Congregação das Servas de Maria Reparadoras. Possui licenciatura em Filosofia pela Pontifícia Universidade Católica do Paraná - PUC/PR; Bacharelado em Teologia pela Faculdade Jesuíta de Filosofia e Teologia - FAJE/BH; Pós-Graduação em Psicopedagogia pela Universidade do Oeste de Santa Catarina - UNOESC-SC; Mestrado em Teologia Sistemática pela Faculdade Jesuíta de Filosofia e Teologia - FAJE/BH; Doutorado em Teologia Sistemática pela Faculdade Jesuíta de Filosofia e Teologia - FAJE/BH.
+                      </p>
+                      <p className="text-white/90 text-sm leading-relaxed mt-3">
+                        Atualmente, é professora de Teologia Sistemática no Instituto Católico de Estudos Superiores do Piauí. Coordena Cursos de Extensão de "Iniciação teológica" - <em>online</em>, oferecidos pelo ICESPI. Coordena o Grupo de pesquisa "A fé cristã em diálogo com o mundo contemporâneo"; faz parte da "Rede brasileira de teólogas" (RDT); atua na pastoral e formação das comunidades e colabora na formação da CRB - Regional - TE/PI.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quarta-feira Tarde */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">04/02 (QUARTA-FEIRA) - PERÍODO VESPERTINO</h4>
+                <ul className="space-y-2 text-white/90 ml-4">
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">13h30min:</span> <span>Reunião com os novos professores</span></li>
+                  <li className="flex flex-col gap-1">
+                    <div className="flex items-start gap-2"><span className="text-yellow-300 font-bold">14h:</span> <span>Reunião com as Coordenações:</span></div>
+                    <ul className="ml-8 space-y-1 text-sm">
+                      <li>• SOR</li>
+                      <li>• SOD</li>
+                      <li>• Educação Física</li>
+                      <li>• Bilíngue</li>
+                    </ul>
+                  </li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">14h:</span> <span>Reunião do Setor de Psicopedagogia: auxiliares de sala e estagiárias</span></li>
+                  <li className="flex flex-col gap-1">
+                    <div className="flex items-start gap-2"><span className="text-yellow-300 font-bold">15h:</span> <span>Reunião com as Coordenações:</span></div>
+                    <ul className="ml-8 space-y-1 text-sm">
+                      <li>• Educação Infantil</li>
+                      <li>• Fundamental I</li>
+                      <li>• Fundamental II</li>
+                    </ul>
+                  </li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">16h30min:</span> <span>Ensino Médio</span></li>
                 </ul>
               </div>
 
-              <div>
-                <h4 className="font-semibold text-primary mb-2">04/02 (QUARTA-FEIRA) - PERÍODO VESPERTINO</h4>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li><strong>13h30min:</strong> Reunião com os novos professores</li>
-                  <li><strong>14h:</strong> Reunião com as Coordenações: SOR, SOD, Educação Física, Bilíngue</li>
-                  <li><strong>14h:</strong> Reunião do Setor de Psicopedagogia: auxiliares de sala e estagiárias</li>
-                  <li><strong>15h:</strong> Reunião com as Coordenações: Educação Infantil, Fundamental I, Fundamental II</li>
-                  <li><strong>16h30min:</strong> Ensino Médio</li>
-                </ul>
+              {/* Quinta-feira */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">05/02 (QUINTA-FEIRA) - PERÍODO INTEGRAL</h4>
+                <div className="text-white/90 ml-4">
+                  <p className="text-lg"><span className="text-yellow-300 font-bold">JORNADA PEDAGÓGICA SINEPE</span></p>
+                  <p className="text-sm mt-2"><strong>Local:</strong> Arena Opus</p>
+                </div>
               </div>
 
-              <div>
-                <h4 className="font-semibold text-primary mb-2">05/02 (QUINTA-FEIRA) - PERÍODO INTEGRAL</h4>
-                <p className="text-muted-foreground ml-4"><strong>Jornada Pedagógica SINEPE</strong> - Local: Arena Opus</p>
+              {/* Sexta-feira Manhã */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">06/02 (SEXTA-FEIRA) - PERÍODO MATUTINO</h4>
+                <ul className="space-y-2 text-white/90 ml-4 mb-6">
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">8h:</span> <span>Jeciane Golinhaki</span></li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">10h:</span> <span>Planejamento</span></li>
+                </ul>
+
+                {/* Palestrante Jeciane */}
+                <div className="mt-6 bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="flex-shrink-0">
+                      <img 
+                        src="https://elisaandreoli.com.br/wp-content/uploads/2026/01/Jeciane.jpg" 
+                        alt="Jeciane Golinhaki"
+                        className="w-48 h-48 rounded-lg object-cover shadow-xl border-4 border-white/20"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h5 className="text-xl font-bold text-yellow-300 mb-2">Tema da Palestra: Conflitos na Escola: Fugir ou Enfrentar?</h5>
+                      <p className="text-white/90 text-sm leading-relaxed">
+                        Jeciane Golinhaki é Professora de Direito; Mediadora de Conflitos na educação; Mestra em Sociedade e desenvolvimento; Palestrante e Formadora de gestores e professores; Pesquisadora e autora de livros na área da aprendizagem para Cultura de Paz e cidadania; Co-fundadora e CEO <em>Cittadino Games</em>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div>
-                <h4 className="font-semibold text-primary mb-2">06/02 (SEXTA-FEIRA) - PERÍODO MATUTINO</h4>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li><strong>8h:</strong> Jeciane Golinhaki - Tema: Conflitos na Escola: Fugir ou Enfrentar?</li>
-                  <li><strong>10h:</strong> Planejamento</li>
+              {/* Sexta-feira Tarde */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">06/02 (SEXTA-FEIRA) - PERÍODO VESPERTINO</h4>
+                <ul className="space-y-2 text-white/90 ml-4 mb-6">
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">14h:</span> <span>Juliana Miranda</span></li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-300 font-bold">16h:</span> <span>Planejamento e organização das salas e do material</span></li>
                 </ul>
-              </div>
 
-              <div>
-                <h4 className="font-semibold text-primary mb-2">06/02 (SEXTA-FEIRA) - PERÍODO VESPERTINO</h4>
-                <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                  <li><strong>14h:</strong> Juliana Miranda - Tema: Violência Contra a Mulher</li>
-                  <li><strong>16h:</strong> Planejamento e organização das salas e do material</li>
-                </ul>
+                {/* Palestrante Juliana */}
+                <div className="mt-6 bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="flex-shrink-0">
+                      <img 
+                        src="https://elisaandreoli.com.br/wp-content/uploads/2026/01/Juliana.jpg" 
+                        alt="Juliana Miranda"
+                        className="w-48 h-48 rounded-lg object-cover shadow-xl border-4 border-white/20"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h5 className="text-xl font-bold text-yellow-300 mb-2">Tema da Palestra: Violência Contra a Mulher</h5>
+                      <p className="text-white/90 text-sm leading-relaxed">
+                        Juliana Miranda é Mestre e Doutora em História pela UDESC e Pós-doutora em Patrimônio Cultural e Sociedade pela Univille. Especialista em Educação de Jovens e Adultos pelo IFSC; atua há 22 anos na educação básica, com experiência em docência, orientação pedagógica e supervisão escolar. Possui formações na área de Psicologia analítica e Psicanálise, desenvolvendo pesquisas sobre História de Vida de professoras e professores, História e Imprensa e estudos de gênero. Em 2025, coordenou um cineclube dedicado às temáticas da História das Mulheres, promovendo o diálogo entre educação, cultura e reflexão crítica sobre o papel feminino na Sociedade.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Diretrizes para 2026:</h3>
+            <h3 className="text-2xl font-bold text-blue-400 mb-3">Diretrizes para 2026:</h3>
             <ul className="list-disc list-inside space-y-2 text-foreground">
               <li>Obrigatoriedade do uso do crachá.</li>
               <li>Os supervisores em 2026 deverão criar uma planilha onde deverão registrar e acompanhar os planejamentos, as avaliações e o controle 
@@ -315,9 +399,9 @@ function PautaTab() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Eventos de 2026:</h3>
-            <p className="text-sm text-muted-foreground mb-4">Para cada evento deverá ser elaborado um projeto. Após o evento deverá ser feita a prestação de contas.</p>
+          <div className="bg-blue-400/20 p-8 rounded-lg border border-white/20">
+            <h3 className="text-3xl text-center font-bold text-blue-400 mb-4">Eventos de 2026:</h3>
+            <p className="text-md text-center text-white mb-8">Para cada evento deverá ser elaborado um projeto. Após o evento deverá ser feita a prestação de contas.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div className="space-y-2">
                 <p className="text-foreground"><strong>02/04:</strong> Retiro dos funcionários</p>
@@ -472,7 +556,7 @@ function OverviewTab() {
         <h2 className="text-2xl font-semibold text-foreground mb-4">
           Resumo Geral
         </h2>
-        <div className="bg-card rounded-lg p-6 border-l-4 border-blue-500">
+        <div className="bg-card rounded-lg p-6 border-l-4 border-zinc-600">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
               <p className="text-muted-foreground text-sm mb-1">Total Geral</p>
@@ -536,7 +620,7 @@ function NewStudentsTab() {
               </div>
               <div>
                 <p className="text-muted-foreground text-sm">Masculino</p>
-                <p className="text-2xl font-bold text-blue-500">
+                <p className="text-2xl font-bold text-zinc-600">
                   {section.maleTotal}
                 </p>
               </div>
@@ -588,7 +672,7 @@ function TotalStudentsTab() {
               </div>
               <div>
                 <p className="text-muted-foreground text-sm">Masculino</p>
-                <p className="text-2xl font-bold text-blue-500">
+                <p className="text-2xl font-bold text-zinc-600">
                   {section.maleTotal}
                 </p>
               </div>
@@ -641,7 +725,7 @@ function RematrikulationTab() {
               </div>
               <div>
                 <p className="text-muted-foreground text-sm">Masculino</p>
-                <p className="text-2xl font-bold text-blue-500">
+                <p className="text-2xl font-bold text-zinc-600">
                   {section.maleTotal}
                 </p>
               </div>
@@ -765,7 +849,7 @@ function Resumo19708Tab() {
           </li>
         </ul>
 
-        <div className="bg-slate-800 p-6 rounded-lg mt-6">
+        <div className="bg-stone-800 p-6 rounded-lg mt-6">
           <p className="text-foreground mb-4">A consolidação de leis (iniciada em 2022) serve para organizar o emaranhado de datas comemorativas, facilitando a consulta para o cidadão e para a administração pública. A inclusão da "Semana da Pátria" busca:</p>
           
           <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
@@ -856,20 +940,20 @@ function Resumo19723Tab() {
           A lei cria um equilíbrio delicado entre a <strong>liberdade de cátedra</strong> (o direito do professor de ensinar) e o <strong>limite da exposição ideológica</strong>.
         </p>
 
-        <div className="bg-slate-800 p-6 rounded-lg mb-6">
+        <div className="bg-stone-800 p-6 rounded-lg mb-6">
           <table className="w-full text-left">
             <thead>
-              <tr className="border-b border-slate-700">
+              <tr className="border-b border-stone-600">
                 <th className="pb-2 text-foreground">Aspecto</th>
                 <th className="pb-2 text-foreground">O que a Lei estabelece</th>
               </tr>
             </thead>
             <tbody className="text-muted-foreground">
-              <tr className="border-b border-slate-700">
+              <tr className="border-b border-stone-600">
                 <td className="py-3"><strong>Papel do Professor</strong></td>
                 <td className="py-3">Deve atuar como um mediador do conhecimento, sem propaganda política.</td>
               </tr>
-              <tr className="border-b border-slate-700">
+              <tr className="border-b border-stone-600">
                 <td className="py-3"><strong>Papel do Aluno</strong></td>
                 <td className="py-3">Tem o direito de não ter sua liberdade de consciência violada.</td>
               </tr>
@@ -957,7 +1041,7 @@ function Resumo19686Tab() {
           A legislação geralmente é fundamentada na busca pela <strong>preservação da intimidade</strong> e na <strong>segurança dos alunos</strong> dentro do ambiente escolar. Os defensores dessa medida argumentam que a separação biológica previne situações de desconforto e garante a privacidade individual.
         </p>
 
-        <div className="bg-slate-800 p-6 rounded-lg">
+        <div className="bg-stone-800 p-6 rounded-lg">
           <h4 className="text-foreground font-semibold mb-3">As instituições de ensino deverão:</h4>
           
           <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
@@ -1026,17 +1110,17 @@ function AlunosNovosPrimeiroDiaTab() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold text-foreground mb-2">
+        <h1 className="text-4xl font-bold text-stone-950 text-foreground mb-2">
           Primeiro Dia - Alunos Novos
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground text-stone-950">
           10 de Fevereiro de 2026
         </p>
       </div>
 
-      <div className="bg-card rounded-lg p-8 border border-border prose prose-invert max-w-none">
+      <div className="bg-card bg-stone-800 rounded-lg p-8 border border-border prose prose-invert max-w-none">
         <div className="space-y-6">
-          <div className="bg-blue-900/20 border-l-4 border-blue-500 p-6 rounded">
+          <div className="bg-stone-900/30 border-l-4 border-zinc-600 p-6 rounded">
             <h3 className="text-xl font-bold text-foreground mb-3">Acolhimento dos Alunos Novos - Dia 10 de Fevereiro</h3>
             <p className="text-foreground mb-3">Prezados Colaboradores,</p>
             <p className="text-foreground mb-3">Espero que todos estejam bem e animados.</p>
@@ -1056,186 +1140,186 @@ function AlunosNovosPrimeiroDiaTab() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">PRIMEIRO DIA DE AULA - ALUNOS NOVOS</h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">PRIMEIRO DIA DE AULA - ALUNOS NOVOS</h3>
             
             <div className="space-y-8">
               <div>
-                <h4 className="text-xl font-semibold text-primary mb-4">MATUTINO</h4>
+                <h4 className="text-white text-center text-3xl font-bold text-primary mb-4">MATUTINO</h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="bg-slate-800">
-                        <th className="border border-slate-700 p-2 text-left text-foreground">ATIVIDADES</th>
-                        <th className="border border-slate-700 p-2 text-left text-foreground">HORÁRIO</th>
-                        <th className="border border-slate-700 p-2 text-left text-foreground">LOCAL</th>
-                        <th className="border border-slate-700 p-2 text-left text-foreground">TURMAS</th>
-                        <th className="border border-slate-700 p-2 text-left text-foreground">RESPONSÁVEL</th>
+                      <tr className="bg-stone-900/30">
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">ATIVIDADES</th>
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">HORÁRIO</th>
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">LOCAL</th>
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">TURMAS</th>
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">RESPONSÁVEL</th>
                       </tr>
                     </thead>
                     <tbody className="text-muted-foreground">
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={4}>APRESENTAÇÃO COORDENAÇÃO, DIREÇÃO E DISCIPLINA</td>
-                        <td className="border border-slate-700 p-2">7h30min</td>
-                        <td className="border border-slate-700 p-2">SALA 3204</td>
-                        <td className="border border-slate-700 p-2">6º e 7º</td>
-                        <td className="border border-slate-700 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={4}>APRESENTAÇÃO COORDENAÇÃO, DIREÇÃO E DISCIPLINA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">7h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA 3204</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º e 7º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">8h</td>
-                        <td className="border border-slate-700 p-2">SALA 3205</td>
-                        <td className="border border-slate-700 p-2">8º e 9º</td>
-                        <td className="border border-slate-700 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA 3205</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8º e 9º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">8h30min</td>
-                        <td className="border border-slate-700 p-2">SALA</td>
-                        <td className="border border-slate-700 p-2">ENSINO MÉDIO</td>
-                        <td className="border border-slate-700 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">11h30min</td>
-                        <td className="border border-slate-700 p-2">SALAS DE AULA</td>
-                        <td className="border border-slate-700 p-2">1º ao 5º</td>
-                        <td className="border border-slate-700 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">11h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALAS DE AULA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º ao 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={4}>FOTO PARA A CARTEIRINHA</td>
-                        <td className="border border-slate-700 p-2">8h</td>
-                        <td className="border border-slate-700 p-2">-</td>
-                        <td className="border border-slate-700 p-2">6º e 7º</td>
-                        <td className="border border-slate-700 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={4}>FOTO PARA A CARTEIRINHA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">-</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º e 7º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">8h30min</td>
-                        <td className="border border-slate-700 p-2">-</td>
-                        <td className="border border-slate-700 p-2">8º e 9º</td>
-                        <td className="border border-slate-700 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">-</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8º e 9º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">9h</td>
-                        <td className="border border-slate-700 p-2">-</td>
-                        <td className="border border-slate-700 p-2">ENSINO MÉDIO</td>
-                        <td className="border border-slate-700 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">9h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">-</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">10h30min</td>
-                        <td className="border border-slate-700 p-2">-</td>
-                        <td className="border border-slate-700 p-2">1º ao 5º</td>
-                        <td className="border border-slate-700 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">10h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">-</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º ao 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={4}>CAPELA</td>
-                        <td className="border border-slate-700 p-2">8h</td>
-                        <td className="border border-slate-700 p-2">CAPELA</td>
-                        <td className="border border-slate-700 p-2">ENSINO MÉDIO</td>
-                        <td className="border border-slate-700 p-2">Simone</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={4}>CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">9h</td>
-                        <td className="border border-slate-700 p-2">CAPELA</td>
-                        <td className="border border-slate-700 p-2">1º ao 5º</td>
-                        <td className="border border-slate-700 p-2">Simone</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">9h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º ao 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">9h30min</td>
-                        <td className="border border-slate-700 p-2">CAPELA</td>
-                        <td className="border border-slate-700 p-2">8º e 9º</td>
-                        <td className="border border-slate-700 p-2">Simone</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">9h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8º e 9º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">10h30min</td>
-                        <td className="border border-slate-700 p-2">CAPELA</td>
-                        <td className="border border-slate-700 p-2">6º e 7º</td>
-                        <td className="border border-slate-700 p-2">Simone</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">10h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º e 7º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>BILÍNGUE / MÚSICA F I</td>
-                        <td className="border border-slate-700 p-2">7h30min</td>
-                        <td className="border border-slate-700 p-2">SALA 3205</td>
-                        <td className="border border-slate-700 p-2">8º e 9º</td>
-                        <td className="border border-slate-700 p-2">João Paulo</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>BILÍNGUE / MÚSICA F I</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">7h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA 3205</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8º e 9º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">João Paulo</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">9h</td>
-                        <td className="border border-slate-700 p-2">SALA 3204</td>
-                        <td className="border border-slate-700 p-2">6º e 7º</td>
-                        <td className="border border-slate-700 p-2">Maria Eduarda</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">9h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA 3204</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º e 7º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Maria Eduarda</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">11h</td>
-                        <td className="border border-slate-700 p-2">GINÁSIO</td>
-                        <td className="border border-slate-700 p-2">1º ao 5º</td>
-                        <td className="border border-slate-700 p-2">Eli e Música</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">11h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º ao 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Eli e Música</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={4}>ELISA AMBIENTAL</td>
-                        <td className="border border-slate-700 p-2">8h30min</td>
-                        <td className="border border-slate-700 p-2">BOSQUE</td>
-                        <td className="border border-slate-700 p-2">1º ao 5º</td>
-                        <td className="border border-slate-700 p-2">Carlos</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={4}>ELISA AMBIENTAL</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º ao 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">9h</td>
-                        <td className="border border-slate-700 p-2">BOSQUE</td>
-                        <td className="border border-slate-700 p-2">8º e 9º</td>
-                        <td className="border border-slate-700 p-2">Gabriel</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">9h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8º e 9º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Gabriel</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">9h30min</td>
-                        <td className="border border-slate-700 p-2">BOSQUE</td>
-                        <td className="border border-slate-700 p-2">6º e 7º</td>
-                        <td className="border border-slate-700 p-2">Mariane</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">9h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º e 7º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Mariane</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">11h</td>
-                        <td className="border border-slate-700 p-2">BOSQUE</td>
-                        <td className="border border-slate-700 p-2">ENSINO MÉDIO</td>
-                        <td className="border border-slate-700 p-2">Mariana</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">11h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Mariana</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>ED. FÍSICA</td>
-                        <td className="border border-slate-700 p-2">9h30min</td>
-                        <td className="border border-slate-700 p-2">GINÁSIO</td>
-                        <td className="border border-slate-700 p-2">ENSINO MÉDIO</td>
-                        <td className="border border-slate-700 p-2">Carlos</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>ED. FÍSICA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">9h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">11h</td>
-                        <td className="border border-slate-700 p-2">QUADRA</td>
-                        <td className="border border-slate-700 p-2">8º e 9º</td>
-                        <td className="border border-slate-700 p-2">Carlos</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">11h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">QUADRA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8º e 9º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">11h30min</td>
-                        <td className="border border-slate-700 p-2">GINÁSIO</td>
-                        <td className="border border-slate-700 p-2">6º e 7º</td>
-                        <td className="border border-slate-700 p-2">Carlos</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">11h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º e 7º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>MAKER</td>
-                        <td className="border border-slate-700 p-2">8h30min</td>
-                        <td className="border border-slate-700 p-2">SALA MAKER</td>
-                        <td className="border border-slate-700 p-2">6º e 7º</td>
-                        <td className="border border-slate-700 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>MAKER</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º e 7º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">10h</td>
-                        <td className="border border-slate-700 p-2">SALA MAKER</td>
-                        <td className="border border-slate-700 p-2">1º ao 5º</td>
-                        <td className="border border-slate-700 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">10h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º ao 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">11h30min</td>
-                        <td className="border border-slate-700 p-2">SALA MAKER</td>
-                        <td className="border border-slate-700 p-2">8º e 9º</td>
-                        <td className="border border-slate-700 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">11h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8º e 9º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">BIBLIOTECA</td>
-                        <td className="border border-slate-700 p-2">8h</td>
-                        <td className="border border-slate-700 p-2">BIBLIOTECA</td>
-                        <td className="border border-slate-700 p-2">1º ao 5º</td>
-                        <td className="border border-slate-700 p-2">Fátima</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BIBLIOTECA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">8h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BIBLIOTECA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º ao 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Fátima</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1243,152 +1327,152 @@ function AlunosNovosPrimeiroDiaTab() {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold text-primary mb-4">VESPERTINO</h4>
+                <h4 className="text-white text-center text-3xl font-bold text-primary mt-30 mb-4">VESPERTINO</h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="bg-slate-800">
-                        <th className="border border-slate-700 p-2 text-left text-foreground">ATIVIDADES</th>
-                        <th className="border border-slate-700 p-2 text-left text-foreground">HORÁRIO</th>
-                        <th className="border border-slate-700 p-2 text-left text-foreground">LOCAL</th>
-                        <th className="border border-slate-700 p-2 text-left text-foreground">TURMAS</th>
-                        <th className="border border-slate-700 p-2 text-left text-foreground">RESPONSÁVEL</th>
+                      <tr className="bg-stone-900/30">
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">ATIVIDADES</th>
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">HORÁRIO</th>
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">LOCAL</th>
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">TURMAS</th>
+                        <th className="border text-left text-lg text-gray-100 border-stone-600 p-2 text-left text-foreground">RESPONSÁVEL</th>
                       </tr>
                     </thead>
                     <tbody className="text-muted-foreground">
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>APRESENTAÇÃO COORDENAÇÃO, DIREÇÃO E DISCIPLINA</td>
-                        <td className="border border-slate-700 p-2">13h30min</td>
-                        <td className="border border-slate-700 p-2">SALA 3204</td>
-                        <td className="border border-slate-700 p-2">6º, 7º e 8º</td>
-                        <td className="border border-slate-700 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>APRESENTAÇÃO COORDENAÇÃO, DIREÇÃO E DISCIPLINA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">13h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA 3204</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">17h30min</td>
-                        <td className="border border-slate-700 p-2">SALAS DE AULA</td>
-                        <td className="border border-slate-700 p-2">1º e 2º</td>
-                        <td className="border border-slate-700 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">17h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALAS DE AULA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">18h</td>
-                        <td className="border border-slate-700 p-2">SALAS DE AULA</td>
-                        <td className="border border-slate-700 p-2">3º, 4º e 5º</td>
-                        <td className="border border-slate-700 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">18h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALAS DE AULA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>FOTO PARA A CARTEIRINHA</td>
-                        <td className="border border-slate-700 p-2">14h</td>
-                        <td className="border border-slate-700 p-2">-</td>
-                        <td className="border border-slate-700 p-2">1º e 2º</td>
-                        <td className="border border-slate-700 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>FOTO PARA A CARTEIRINHA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">14h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">-</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">14h30min</td>
-                        <td className="border border-slate-700 p-2">-</td>
-                        <td className="border border-slate-700 p-2">3º, 4º e 5º</td>
-                        <td className="border border-slate-700 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">14h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">-</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">15h</td>
-                        <td className="border border-slate-700 p-2">-</td>
-                        <td className="border border-slate-700 p-2">6º, 7º e 8º</td>
-                        <td className="border border-slate-700 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">15h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">-</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>CAPELA</td>
-                        <td className="border border-slate-700 p-2">15h</td>
-                        <td className="border border-slate-700 p-2">CAPELA</td>
-                        <td className="border border-slate-700 p-2">3º, 4º e 5º</td>
-                        <td className="border border-slate-700 p-2">Simone</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">15h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">16h</td>
-                        <td className="border border-slate-700 p-2">CAPELA</td>
-                        <td className="border border-slate-700 p-2">1º e 2º</td>
-                        <td className="border border-slate-700 p-2">Simone</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">16h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">16h50min</td>
-                        <td className="border border-slate-700 p-2">CAPELA</td>
-                        <td className="border border-slate-700 p-2">6º, 7º e 8º</td>
-                        <td className="border border-slate-700 p-2">Simone</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">16h50min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>BILÍNGUE / MÚSICA F I</td>
-                        <td className="border border-slate-700 p-2">16h</td>
-                        <td className="border border-slate-700 p-2">SALA 3204</td>
-                        <td className="border border-slate-700 p-2">6º, 7º e 8º</td>
-                        <td className="border border-slate-700 p-2">João Paulo</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>BILÍNGUE / MÚSICA F I</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">16h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA 3204</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">João Paulo</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">16h30min</td>
-                        <td className="border border-slate-700 p-2">GINÁSIO</td>
-                        <td className="border border-slate-700 p-2">1º e 2º</td>
-                        <td className="border border-slate-700 p-2">Bilíngue e Música</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">16h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Bilíngue e Música</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">17h</td>
-                        <td className="border border-slate-700 p-2">GINÁSIO</td>
-                        <td className="border border-slate-700 p-2">3º, 4º e 5º</td>
-                        <td className="border border-slate-700 p-2">Bilíngue e Música</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">17h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Bilíngue e Música</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>ELISA AMBIENTAL</td>
-                        <td className="border border-slate-700 p-2">14h</td>
-                        <td className="border border-slate-700 p-2">BOSQUE</td>
-                        <td className="border border-slate-700 p-2">6º, 7º e 8º</td>
-                        <td className="border border-slate-700 p-2">Denise e Magali</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>ELISA AMBIENTAL</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">14h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Denise e Magali</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">15h</td>
-                        <td className="border border-slate-700 p-2">BOSQUE</td>
-                        <td className="border border-slate-700 p-2">1º e 2º</td>
-                        <td className="border border-slate-700 p-2">Carlos</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">15h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">16h</td>
-                        <td className="border border-slate-700 p-2">BOSQUE</td>
-                        <td className="border border-slate-700 p-2">3º, 4º e 5º</td>
-                        <td className="border border-slate-700 p-2">Carlos</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">16h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">ED. FÍSICA</td>
-                        <td className="border border-slate-700 p-2">17h30min</td>
-                        <td className="border border-slate-700 p-2">GINÁSIO</td>
-                        <td className="border border-slate-700 p-2">6º, 7º e 8º</td>
-                        <td className="border border-slate-700 p-2">Carlos</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">ED. FÍSICA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">17h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={3}>MAKER</td>
-                        <td className="border border-slate-700 p-2">15h30min</td>
-                        <td className="border border-slate-700 p-2">SALA MAKER</td>
-                        <td className="border border-slate-700 p-2">6º, 7º e 8º</td>
-                        <td className="border border-slate-700 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={3}>MAKER</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">15h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">16h30min</td>
-                        <td className="border border-slate-700 p-2">SALA MAKER</td>
-                        <td className="border border-slate-700 p-2">3º, 4º e 5º</td>
-                        <td className="border border-slate-700 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">16h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">17h</td>
-                        <td className="border border-slate-700 p-2">SALA MAKER</td>
-                        <td className="border border-slate-700 p-2">1º e 2º</td>
-                        <td className="border border-slate-700 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">17h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2" rowSpan={2}>BIBLIOTECA</td>
-                        <td className="border border-slate-700 p-2">14h</td>
-                        <td className="border border-slate-700 p-2">BIBLIOTECA</td>
-                        <td className="border border-slate-700 p-2">3º, 4º e 5º</td>
-                        <td className="border border-slate-700 p-2">Fátima</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2" rowSpan={2}>BIBLIOTECA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">14h</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BIBLIOTECA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Fátima</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-700 p-2">14h30min</td>
-                        <td className="border border-slate-700 p-2">BIBLIOTECA</td>
-                        <td className="border border-slate-700 p-2">1º e 2º</td>
-                        <td className="border border-slate-700 p-2">Fátima</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">14h30min</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">BIBLIOTECA</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-100 border-stone-600 p-2">Fátima</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1459,7 +1543,7 @@ function MatutinoTab() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-slate-800 p-6 rounded-lg">
+            <div className="bg-stone-800 p-6 rounded-lg">
               <h4 className="text-lg font-semibold text-foreground mb-4">HORÁRIO - EDUCAÇÃO INFANTIL - MATUTINO</h4>
               <ul className="space-y-1 text-muted-foreground">
                 <li>1ª aula: 8h às 8h45min</li>
@@ -1471,7 +1555,7 @@ function MatutinoTab() {
               </ul>
             </div>
 
-            <div className="bg-slate-800 p-6 rounded-lg">
+            <div className="bg-stone-800 p-6 rounded-lg">
               <h4 className="text-lg font-semibold text-foreground mb-4">HORÁRIO - ENSINO FUNDAMENTAL I (1º ao 5º ano) - MATUTINO</h4>
               <ul className="space-y-1 text-muted-foreground">
                 <li>1ª aula: 7h15min às 8h</li>
@@ -1484,7 +1568,7 @@ function MatutinoTab() {
               </ul>
             </div>
 
-            <div className="bg-slate-800 p-6 rounded-lg md:col-span-2">
+            <div className="bg-stone-800 p-6 rounded-lg md:col-span-2">
               <h4 className="text-lg font-semibold text-foreground mb-4">HORÁRIO - ENSINO FUNDAMENTAL II (6º ao 9º ano) e ENSINO MÉDIO - MATUTINO</h4>
               <ul className="space-y-1 text-muted-foreground">
                 <li>1ª aula: 7h15min às 8h</li>
@@ -1560,7 +1644,7 @@ function VespertinoTab() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-slate-800 p-6 rounded-lg">
+            <div className="bg-stone-800 p-6 rounded-lg">
               <h4 className="text-lg font-semibold text-foreground mb-4">HORÁRIO - EDUCAÇÃO INFANTIL - VESPERTINO</h4>
               <ul className="space-y-1 text-muted-foreground">
                 <li>1ª aula: 13h30min às 14h15min</li>
@@ -1572,7 +1656,7 @@ function VespertinoTab() {
               </ul>
             </div>
 
-            <div className="bg-slate-800 p-6 rounded-lg">
+            <div className="bg-stone-800 p-6 rounded-lg">
               <h4 className="text-lg font-semibold text-foreground mb-4">HORÁRIO - ENSINO FUNDAMENTAL I (1º ao 5º ano) - VESPERTINO</h4>
               <ul className="space-y-1 text-muted-foreground">
                 <li>1ª aula: 13h30min às 14h15min</li>
@@ -1585,7 +1669,7 @@ function VespertinoTab() {
               </ul>
             </div>
 
-            <div className="bg-slate-800 p-6 rounded-lg md:col-span-2">
+            <div className="bg-stone-800 p-6 rounded-lg md:col-span-2">
               <h4 className="text-lg font-semibold text-foreground mb-4">HORÁRIO - ENSINO FUNDAMENTAL II (6º ao 9º ano) e ENSINO MÉDIO - VESPERTINO</h4>
               <ul className="space-y-1 text-muted-foreground">
                 <li>1ª aula: 13h30min às 14h15min</li>
