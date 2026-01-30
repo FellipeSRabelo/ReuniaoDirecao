@@ -94,7 +94,7 @@ export default function Home() {
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Main Content */}
-      <main className="ml-64 flex-1 overflow-auto relative bg-stone-300">
+      <main className="md:ml-64 flex-1 overflow-auto relative bg-stone-300">
         {/* Logo centralizada no topo */}
         <div className="flex justify-center pt-6 pb-4 border-b border-stone-400/40">
           <img
