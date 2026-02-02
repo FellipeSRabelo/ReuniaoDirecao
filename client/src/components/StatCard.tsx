@@ -23,7 +23,7 @@ export default function StatCard({
   };
 
   return (
-    <div className={`bg-zinc-800 border border-l-6 ${variantStyles[variant]} rounded-lg p-6 shadow-2xl hover:shadow-4xl hover:bg-slate-800 transition-all duration-300`}>
+    <div className={`bg-zinc-800 border-l-6 ${variantStyles[variant]} rounded-lg p-6 shadow-2xl hover:shadow-4xl hover:bg-slate-800 transition-all duration-300`}>
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <p className="text-sm font-medium text-slate-200 mb-2">

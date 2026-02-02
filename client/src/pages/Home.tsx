@@ -170,7 +170,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </ul>
           </div>
 
-          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl">
+          <div className="bg-zinc-800 p-8 rounded-xl border-l-4  border-blue-500 shadow-2xl">
             <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">5. Dinâmica (Zoraia)</h3>
             <p className="text-center text-white/90 mb-6 text-lg">Estilos de Liderança</p>
             
@@ -290,7 +290,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
                       <li>Mapa de Professores por turma e disciplina</li>
                       <li>Acompanhamento Pedagógico (registro)</li>
                       <li>Ficha de atendimento Pais e Professores - Registro, Alinhamento (combinados)</li>
-                      <li className="text-zinc-800">Protocolos de situações desafiadoras - Racismo e Bullying</li>
+                      <li className="text-zinc-800">Protocolos de situações desafiadoras - <button onClick={() => onTabChange('protocolo-bullying')} className="text-blue-400 hover:text-blue-300 underline cursor-pointer">(Bullying)</button> e <button onClick={() => onTabChange('protocolo-racismo')} className="text-blue-400 hover:text-blue-300 underline cursor-pointer">(Racismo)</button></li>
                       </ul>
                       <p className="text-zinc-800 mt-2 mb-2">Vamos virar a chave, fazer o que importa na ordem certa, com intenção.</p>
               <h3 className="text-xl font-semibold text-zinc-800 mb-3">
@@ -453,10 +453,10 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl">
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl">
             <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">13. Diretrizes para 2026</h3>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <ul className="space-y-3 text-white/90">
                 <li className="flex items-start gap-3">
                   <span className="text-white font-bold mt-0.5">•</span>
@@ -485,11 +485,11 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl">
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl">
             <h3 className="text-3xl font-bold text-white mb-4">14. Eventos de 2026</h3>
             <p className="text-white/90 mb-6">Para cada evento deverá ser elaborado um projeto. Após o evento deverá ser feita a prestação de contas.</p>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <ul className="space-y-2 text-white/90 text-sm">
                 <li><strong>02/04:</strong> Retiro dos funcionários: (Josiane / Equipe SOR / Direção)</li>
                 <li><strong>22/04 até 24/04:</strong> Semana Literária (Coordenações e Direção)</li>
@@ -525,9 +525,9 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl mt-6">
             <h3 className="text-3xl font-bold text-white mb-4">15. Setor de Psicologia / Psicopedagogia - Inclusão</h3>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90 mb-4">Em 2026, permanece duas frente da Psicologia / Psicopedagogia - Inclusão:</p>
               <ul className="space-y-2 text-white/90 list-disc list-inside">
                 <li><strong>Letícia:</strong> Questões emocionais</li>
@@ -536,9 +536,9 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl mt-6">
             <h3 className="text-3xl font-bold text-white mb-4">16. Projetos 2026</h3>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90 mb-4">Todos os projetos deverão possuir registro fotográfico e avaliação, que deverão ser entregues à Direção Pedagógica após a sua realização.</p>
               <ul className="space-y-2 text-white/90 list-disc list-inside">
                 <li><strong>Travessia:</strong> Josiane, Carol e Fernando</li>
@@ -554,32 +554,32 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl mt-6">
             <h3 className="text-3xl font-bold text-white mb-4">17. Encaminhamentos: Serviços Social, Psicologia e Psicopedagogia</h3>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90 mb-4">Os alunos encaminhados à Assistente Social e aos Setores de Psicologia e Psicopedagogia deverão ter autorização da Direção. Os coordenadores deverão solicitar à Assistente Social a relação de bolsistas (doc. Sigiloso).</p>
               <p className="text-white font-bold mb-4">IMPORTANTE: OS SETORES SÓ PODERÃO ATENDER MEDIANTE O PROTOCOLO ASSINADO PELA DIREÇÃO PEDAGÓGICA.</p>
               <p className="text-white/90 italic">Obs.: Os especialistas deverão criar uma planilha onde deverão registrar e acompanhar todos os atendimentos. A planilha deverá ser compartilhada com as Coordenações e Direção.</p>
             </div>
           </div>
 
-          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl mt-6">
             <h3 className="text-3xl font-bold text-white mb-4">18. Reuniões Pedagógicas</h3>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90">Nas segundas-feiras, às 10h, acontecerão as reuniões Pedagógicas.</p>
             </div>
           </div>
 
-          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl mt-6">
             <h3 className="text-3xl font-bold text-white mb-4">19. Reunião Setor de Inclusão e Psicologia</h3>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90">O Setor de Inclusão e Psicologia fará reunião todas as terças-feiras, às 9h.</p>
             </div>
           </div>
 
-          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl mt-6">
             <h3 className="text-3xl font-bold text-white mb-4">20. Reunião de Gestores</h3>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90">Nas quartas-feiras, acontecerá nossa reunião de gestores será às 14h.</p>
             </div>
           </div>
@@ -1238,206 +1238,206 @@ function AlunosNovosPrimeiroDiaTab() {
 
       <div className="rounded-2xl p-8 mb-8 bg-white/50 shadow-lg border border-gray-100">
         <div className="space-y-6">
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Acolhimento dos Alunos Novos - Dia 10 de Fevereiro</h3>
-            <p className="text-gray-900 mb-3">Prezados Colaboradores,</p>
-            <p className="text-gray-900 mb-3">Espero que todos estejam bem e animados.</p>
-            <p className="text-gray-900 mb-3">
+          <div className="bg-zinc-800 border-l-6 rounded-lg border-blue-500 p-6">
+            <h3 className="text-xl font-bold text-white mb-10">Acolhimento dos Alunos Novos - Dia 10 de Fevereiro</h3>
+            <p className="text-white mb-3">Prezados Colaboradores,</p>
+            <p className="text-white mb-3">Espero que todos estejam bem e animados.</p>
+            <p className="text-white mb-3">
               No dia 10 de fevereiro, teremos a alegria de receber nossos novos alunos. Este é um momento crucial para eles, e é fundamental que possamos acolhê-los com muito carinho e atenção.
             </p>
-            <p className="text-gray-900 mb-3">
+            <p className="text-white mb-3">
               Peço que cada um de vocês esteja preparado para oferecer um sorriso acolhedor, ouvir suas dúvidas e ajudá-los a se sentirem à vontade em nossa escola. A primeira impressão é fundamental para que eles se sintam parte de nosso Colégio.
             </p>
-            <p className="text-gray-900 mb-3">
+            <p className="text-white  mb-3">
               Estamos confiantes de que, juntos, faremos deste dia uma experiência memorável e especial para nossos novos estudantes.
             </p>
-            <p className="text-gray-900 mb-3">Agradeço pela dedicação e pelo compromisso de sempre.</p>
-            <p className="text-gray-900">Atenciosamente,</p>
-            <p className="text-gray-900 font-semibold italic">Zoraia J. R. da Silveira</p>
-            <p className="text-gray-700">Diretora Pedagógica</p>
+            <p className="text-white mb-3">Agradeço pela dedicação e pelo compromisso de sempre.</p>
+            <p className="text-white mt-10">Atenciosamente,</p>
+            <p className="text-white font-semibold italic">Zoraia J. R. da Silveira</p>
+            <p className="text-white">Diretora Pedagógica</p>
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">PRIMEIRO DIA DE AULA - ALUNOS NOVOS</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6 mt-10 text-center">PRIMEIRO DIA DE AULA - ALUNOS NOVOS</h3>
             
             <div className="space-y-8">
               <div>
-                <h4 className="text-gray-900 text-center text-3xl font-bold mb-4">MATUTINO</h4>
+                <h4 className="text-gray-900 text-center text-3xl font-bold mb-10">MATUTINO</h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2">ATIVIDADES</th>
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2">HORÁRIO</th>
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2">LOCAL</th>
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2">TURMAS</th>
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2">RESPONSÁVEL</th>
+                      <tr className="bg-zinc-800">
+                        <th className="border text-left text-lg text-white border-gray-300 p-2">ATIVIDADES</th>
+                        <th className="border text-left text-lg text-white border-gray-300 p-2">HORÁRIO</th>
+                        <th className="border text-left text-lg text-white border-gray-300 p-2">LOCAL</th>
+                        <th className="border text-left text-lg text-white border-gray-300 p-2">TURMAS</th>
+                        <th className="border text-left text-lg text-white border-gray-300 p-2">RESPONSÁVEL</th>
                       </tr>
                     </thead>
                     <tbody className="text-gray-900">
                       <tr>
-                        <td className="border text-left border-gray-300 p-2" rowSpan={4}>APRESENTAÇÃO COORDENAÇÃO, DIREÇÃO E DISCIPLINA</td>
-                        <td className="border text-left border-gray-300 p-2">7h30min</td>
-                        <td className="border text-left border-gray-300 p-2">SALA 3204</td>
-                        <td className="border text-left border-gray-300 p-2">6º e 7º</td>
-                        <td className="border text-left border-gray-300 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30" rowSpan={4}>APRESENTAÇÃO COORDENAÇÃO, DIREÇÃO E DISCIPLINA</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">7h30min</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">SALA 3204</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">6º e 7º</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border text-left border-gray-300 p-2">8h</td>
-                        <td className="border text-left border-gray-300 p-2">SALA 3205</td>
-                        <td className="border text-left border-gray-300 p-2">8º e 9º</td>
-                        <td className="border text-left border-gray-300 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">8h</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">SALA 3205</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">8º e 9º</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border text-left border-gray-300 p-2">8h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">ENSINO MÉDIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">8h30min</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">SALA</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">ENSINO MÉDIO</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">11h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALAS DE AULA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º ao 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">11h30min</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">SALAS DE AULA</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">1º ao 5º</td>
+                        <td className="border text-left border-gray-500 p-2 bg-zinc-800/30">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={4}>FOTO PARA A CARTEIRINHA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">-</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º e 7º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30" rowSpan={4}>FOTO PARA A CARTEIRINHA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">-</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">6º e 7º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">-</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8º e 9º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">-</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8º e 9º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">9h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">-</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">ENSINO MÉDIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">9h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">-</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">10h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">-</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º ao 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">10h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">-</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">1º ao 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={4}>CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">ENSINO MÉDIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Simone</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30" rowSpan={4}>CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">9h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º ao 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Simone</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">9h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">1º ao 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">9h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8º e 9º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Simone</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">9h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8º e 9º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">10h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º e 7º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Simone</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">10h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">6º e 7º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>BILÍNGUE / MÚSICA F I</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">7h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA 3205</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8º e 9º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">João Paulo</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30" rowSpan={3}>BILÍNGUE / MÚSICA F I</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">7h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">SALA 3205</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8º e 9º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">João Paulo</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">9h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA 3204</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º e 7º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Maria Eduarda</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">9h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">SALA 3204</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">6º e 7º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Maria Eduarda</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">11h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">GINÁSIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º ao 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Eli e Música</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">11h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">GINÁSIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">1º ao 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Eli e Música</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={4}>ELISA AMBIENTAL</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BOSQUE</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º ao 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Carlos</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30" rowSpan={4}>ELISA AMBIENTAL</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">BOSQUE</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">1º ao 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">9h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BOSQUE</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8º e 9º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Gabriel</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">9h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">BOSQUE</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8º e 9º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Gabriel</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">9h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BOSQUE</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º e 7º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Mariane</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">9h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">BOSQUE</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">6º e 7º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Mariane</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">11h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BOSQUE</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">ENSINO MÉDIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Mariana</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">11h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">BOSQUE</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Mariana</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>ED. FÍSICA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">9h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">GINÁSIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">ENSINO MÉDIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Carlos</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30" rowSpan={3}>ED. FÍSICA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">9h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">GINÁSIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">ENSINO MÉDIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">11h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">QUADRA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8º e 9º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Carlos</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">11h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">QUADRA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8º e 9º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">11h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">GINÁSIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º e 7º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Carlos</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">11h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">GINÁSIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">6º e 7º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>MAKER</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA MAKER</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º e 7º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30" rowSpan={3}>MAKER</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">SALA MAKER</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">6º e 7º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">10h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA MAKER</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º ao 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">10h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">SALA MAKER</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">1º ao 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">11h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA MAKER</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8º e 9º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">11h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">SALA MAKER</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8º e 9º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BIBLIOTECA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">8h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BIBLIOTECA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º ao 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Fátima</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">BIBLIOTECA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">8h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">BIBLIOTECA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">1º ao 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2 bg-zinc-800/30">Fátima</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1445,152 +1445,152 @@ function AlunosNovosPrimeiroDiaTab() {
               </div>
 
               <div>
-                <h4 className="text-white text-center text-3xl font-bold text-primary mt-30 mb-4">VESPERTINO</h4>
+                <h4 className="text-zinc-800 text-center text-3xl font-bold text-primary mt-30 mb-4">VESPERTINO</h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm border-collapse">
                     <thead>
                       <tr className="bg-gray-100">
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2 text-left text-foreground">ATIVIDADES</th>
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2 text-left text-foreground">HORÁRIO</th>
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2 text-left text-foreground">LOCAL</th>
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2 text-left text-foreground">TURMAS</th>
-                        <th className="border text-left text-lg text-gray-900 border-gray-300 p-2 text-left text-foreground">RESPONSÁVEL</th>
+                        <th className="border bg-zinc-800 text-left text-lg text-white border-gray-500 p-2 text-left text-foreground">ATIVIDADES</th>
+                        <th className="border bg-zinc-800 text-left text-lg text-white border-gray-500 p-2 text-left text-foreground">HORÁRIO</th>
+                        <th className="border bg-zinc-800 text-left text-lg text-white border-gray-500 p-2 text-left text-foreground">LOCAL</th>
+                        <th className="border bg-zinc-800 text-left text-lg text-white border-gray-500 p-2 text-left text-foreground">TURMAS</th>
+                        <th className="border bg-zinc-800 text-left text-lg text-white border-gray-500 p-2 text-left text-foreground">RESPONSÁVEL</th>
                       </tr>
                     </thead>
                     <tbody className="text-muted-foreground">
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>APRESENTAÇÃO COORDENAÇÃO, DIREÇÃO E DISCIPLINA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">13h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA 3204</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º, 7º e 8º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2" rowSpan={3}>APRESENTAÇÃO COORDENAÇÃO, DIREÇÃO E DISCIPLINA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">13h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">SALA 3204</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">17h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALAS DE AULA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º e 2º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">17h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">SALAS DE AULA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">18h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALAS DE AULA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">3º, 4º e 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Irmã Carmen, Zoraia e Silvana</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">18h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">SALAS DE AULA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Irmã Carmen, Zoraia e Silvana</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>FOTO PARA A CARTEIRINHA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">14h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">-</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º e 2º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2" rowSpan={3}>FOTO PARA A CARTEIRINHA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">14h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">-</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">14h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">-</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">3º, 4º e 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">14h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">-</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">15h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">-</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º, 7º e 8º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Allysson e T.I.</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">15h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">-</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Allysson e T.I.</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">15h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">3º, 4º e 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Simone</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2" rowSpan={3}>CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">15h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">16h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º e 2º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Simone</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">16h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">16h50min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">CAPELA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º, 7º e 8º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Simone</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">16h50min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">CAPELA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Simone</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>BILÍNGUE / MÚSICA F I</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">16h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA 3204</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º, 7º e 8º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">João Paulo</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2" rowSpan={3}>BILÍNGUE / MÚSICA F I</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">16h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">SALA 3204</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">João Paulo</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">16h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">GINÁSIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º e 2º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Bilíngue e Música</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">16h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Bilíngue e Música</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">17h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">GINÁSIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">3º, 4º e 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Bilíngue e Música</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">17h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Bilíngue e Música</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>ELISA AMBIENTAL</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">14h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BOSQUE</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º, 7º e 8º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Denise e Magali</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2" rowSpan={3}>ELISA AMBIENTAL</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">14h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Denise e Magali</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">15h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BOSQUE</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º e 2º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Carlos</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">15h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">16h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BOSQUE</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">3º, 4º e 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Carlos</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">16h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">BOSQUE</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">ED. FÍSICA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">17h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">GINÁSIO</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º, 7º e 8º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Carlos</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">ED. FÍSICA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">17h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">GINÁSIO</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Carlos</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={3}>MAKER</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">15h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA MAKER</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">6º, 7º e 8º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2" rowSpan={3}>MAKER</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">15h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">6º, 7º e 8º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">16h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA MAKER</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">3º, 4º e 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">16h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">17h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">SALA MAKER</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º e 2º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Marilda / Júlio</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">17h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">SALA MAKER</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Marilda / Júlio</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2" rowSpan={2}>BIBLIOTECA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">14h</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BIBLIOTECA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">3º, 4º e 5º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Fátima</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2" rowSpan={2}>BIBLIOTECA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">14h</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">BIBLIOTECA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">3º, 4º e 5º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Fátima</td>
                       </tr>
                       <tr>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">14h30min</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">BIBLIOTECA</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">1º e 2º</td>
-                        <td className="border text-left text-gray-900 border-gray-300 p-2">Fátima</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">14h30min</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">BIBLIOTECA</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">1º e 2º</td>
+                        <td className="border text-left text-gray-900 bg-zinc-800/30 border-gray-500 p-2">Fátima</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1822,7 +1822,7 @@ function NovoAppTITab() {
             poster=""
           >
             <source
-              src="https://elisaandreoli.com.br/wp-content/uploads/2026/01/Novo-Aplicativo.mp4"
+              src="https://elisaandreoli.com.br/wp-content/uploads/2026/02/Novo-APP-Suporte-TI_.mp4"
               type="video/mp4"
             />
             Seu navegador não suporta a reprodução de vídeos.
@@ -1878,8 +1878,8 @@ function ProtocoloRacismoTab() {
             <li>Aplicar medidas educativas e formativas, nunca apenas punitivas. Tendo como base o regimento interno escolar;</li>
           </ul>
 
-          <div className="bg-stone-800 p-6 rounded-lg mt-8">
-            <h3 className="text-2xl font-semibold text-white mb-4">FICHA DE OCORRÊNCIA DE RACISMO NA ESCOLA</h3>
+          <div className="bg-stone-800 p-6 rounded-lg pt-10 mt-8">
+            <h3 className="text-2xl font-semibold text-white mb-15">FICHA DE OCORRÊNCIA DE RACISMO NA ESCOLA</h3>
             
             <div className="space-y-4 text-white">
               <p>Data da ocorrência: ____/____/______. Horário aproximado:____:____</p>
@@ -2067,27 +2067,27 @@ function ProtocoloBullyingTab() {
             <li>Manter os canais de escuta aberto, pessoa referência, Caixa do Silêncio Seguro;</li>
           </ul>
 
-          <div className="bg-stone-800 p-6 rounded-lg mt-8">
-            <h3 className="text-2xl font-semibold text-white mb-4">Formulário - Caixa Bullying</h3>
+          <div className="bg-stone-800 p-6 rounded-lg mt-8 pt-10">
+            <h3 className="text-2xl font-semibold text-white mb-10">Formulário - Caixa Bullying</h3>
             
             <div className="space-y-4 text-white">
               <p><strong>Nome do aluno (a) (Vítima):</strong>_____________________________________________</p>
               <p><strong>Turma:</strong> _____________________________ <strong>Período:</strong>_____________________________</p>
 
               <p className="mt-4"><strong>Nome do aluno (a) citado, que pratica o Bullying:</strong></p>
-              <p>___________________________________________________________________</p>
+              <p>____________________________________________________________________________</p>
               <p><strong>Turma:</strong> _____________________________ <strong>Período:</strong>_____________________________</p>
 
-              <p className="mt-4"><strong>Outros envolvidos:</strong> _________________________________________________________________________________________________________________________________</p>
+              <p className="mt-4"><strong>Outros envolvidos:</strong> _______________________________________________________</p>
 
-              <p className="mt-4"><strong>Data do bilhete:</strong> ____________________</p>
+              <p className="mt-4"><strong>Data do bilhete:</strong> __________________________________________________________</p>
 
               <p className="mt-4"><strong>Encaminhamentos:</strong></p>
               <p className="border border-white/30 p-4 min-h-[200px]"></p>
 
               <p className="mt-6">São José, _______ de _____________________________ de 2025</p>
               <p className="mt-4">Caso atendido por:</p>
-              <p>_____________________________________________</p>
+              <p>______________________________________________________________________________</p>
             </div>
           </div>
         </div>
