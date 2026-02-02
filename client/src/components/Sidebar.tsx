@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BarChart3, FileText, Home, Users, ChevronDown, BookOpen, Scale, GraduationCap, Calendar, Smartphone, SmartphoneIcon } from "lucide-react";
+import { BarChart3, FileText, Home, Users, ChevronDown, BookOpen, Scale, GraduationCap, Calendar, Smartphone, SmartphoneIcon, ShieldAlert } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SidebarProps {
@@ -61,6 +61,15 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         { id: "matutino", label: "Matutino" },
         { id: "vespertino", label: "Vespertino" },
         { id: "alunos-novos-primeiro-dia", label: "Alunos novos" },
+      ],
+    },
+    {
+      id: "protocolos",
+      label: "Protocolos",
+      icon: ShieldAlert,
+      submenu: [
+        { id: "protocolo-racismo", label: "Racismo" },
+        { id: "protocolo-bullying", label: "Bullying" },
       ],
     },
     {

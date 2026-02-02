@@ -81,10 +81,15 @@ export default function Home() {
       // Novo APP TI
       case "novo-app-ti":
         return <NovoAppTITab />;
-        return <AlunosNovosPrimeiroDiaTab />;
+
+      // Protocolos
+      case "protocolo-racismo":
+        return <ProtocoloRacismoTab />;
+      case "protocolo-bullying":
+        return <ProtocoloBullyingTab />;
 
       default:
-        return <PautaTab />;
+        return <PautaTab onTabChange={setActiveTab} />;
     }
   };
 
@@ -1822,6 +1827,269 @@ function NovoAppTITab() {
             />
             Seu navegador não suporta a reprodução de vídeos.
           </video>
+        </div>
+      </div>
+    </div>
+  );
+}
+// ============ PROTOCOLOS ============
+function ProtocoloRacismoTab() {
+  return (
+    <div className="space-y-8">
+      <div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          Protocolo de atendimento e manejo em casos de Racismo na Escola
+        </h1>
+      </div>
+
+      <div className="rounded-2xl p-8 mb-8 bg-white/50 shadow-lg border border-gray-100">
+        <div className="space-y-6 text-gray-900">
+          <p>
+            A Lei Federal nº 10.639, de 9 de janeiro de 2003, alterou a Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/1996), tornando obrigatório o ensino da História e Cultura Afro-Brasileira e Africana em todas as escolas públicas e privadas do país. Essa legislação reconhece a importância da valorização da contribuição do povo negro para a formação da sociedade brasileira e estabelece o dever da escola em promover uma educação antirracista, inclusiva e baseada no respeito à diversidade étnico-racial. O Colégio Elisa Andreoli faz o seu papel enquanto unidade educativa, onde os planejamentos dos professores caminham em concordância com a lei.
+          </p>
+
+          <p>
+            O racismo, em qualquer de suas formas — verbal, simbólica, estrutural ou institucional, viola os direitos humanos e os princípios constitucionais da igualdade e dignidade. A escola, enquanto espaço de formação cidadã, tem papel essencial na prevenção, identificação, acolhimento e enfrentamento de situações de discriminação racial.
+          </p>
+
+          <p>
+            Este protocolo tem como finalidade orientar o atendimento, o manejo e o encaminhamento de casos de racismo no ambiente escolar, assegurando a proteção integral de estudantes e demais membros da comunidade escolar, e fortalecendo a construção de uma cultura de paz, respeito e equidade racial.
+          </p>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Identificação e comunicação do caso:</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>A quem relatar:</strong> Coordenação disciplinar e orientadora da escola;</li>
+            <li><strong>Forma de Registro:</strong> Realizar anotação imediata em formulário próprio. (Ficha de ocorrência de Racismo)</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Acolhimento à vítima</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Escuta com atenção, empatia e sigilo;</li>
+            <li>Validar os sentimentos da vítima;</li>
+            <li>Garantir que ela não seja exposta publicamente;</li>
+            <li>Comunicar em seguida a gestão escolar e coordenação pedagógica;</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Encaminhamentos com o suposto autor</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Escuta com atenção, ouvindo a versão dos fatos com serenidade e respeito;</li>
+            <li>Registro das falas na ficha de ocorrência;</li>
+            <li>Explicar de forma adequada que o racismo é inaceitável e ilegal;</li>
+            <li>Aplicar medidas educativas e formativas, nunca apenas punitivas. Tendo como base o regimento interno escolar;</li>
+          </ul>
+
+          <div className="bg-stone-800 p-6 rounded-lg mt-8">
+            <h3 className="text-2xl font-semibold text-white mb-4">FICHA DE OCORRÊNCIA DE RACISMO NA ESCOLA</h3>
+            
+            <div className="space-y-4 text-white">
+              <p>Data da ocorrência: ____/____/______. Horário aproximado:____:____</p>
+              <p>Local (sala, pátio, corredor, etc.)___________________________________</p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Dados da vítima</h4>
+              <p>Nome: ___________________________________________________________</p>
+              <p>Idade: ______________________________ Ano/turma: _________________</p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Dados dos envolvidos</h4>
+              <p>Nome: ___________________________________________________________</p>
+              <p>Idade: ______________________________ Ano/turma: _________________</p>
+              <p>Nome: ___________________________________________________________</p>
+              <p>Idade: ______________________________ Ano/turma: _________________</p>
+              <p>Nome: ___________________________________________________________</p>
+              <p>Idade: ______________________________ Ano/turma: _________________</p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Descrição do fato</h4>
+              <p className="border border-white/30 p-4 min-h-[100px]"></p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Relato da vítima</h4>
+              <p className="border border-white/30 p-4 min-h-[100px]"></p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Relato do (a) suposto (a) autor (a):</h4>
+              <p className="border border-white/30 p-4 min-h-[100px]"></p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Relato das testemunhas:</h4>
+              <p className="border border-white/30 p-4 min-h-[100px]"></p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Providências imediatas:</h4>
+              <p>( ) Acolhimento da vítima;</p>
+              <p>( ) Comunicação à Coordenação e Direção</p>
+              <p>( ) Notificação a família da vítima;</p>
+              <p>( ) Notificação a família do autor;</p>
+              <p>( ) Outras ações: _____________________________________________</p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Encaminhamentos pedagógicos e educativos:</h4>
+              <p className="border border-white/30 p-4 min-h-[100px]"></p>
+
+              <h4 className="text-xl font-semibold mt-6 mb-2">Responsáveis pelo atendimento:</h4>
+              <p>____________________________________________________________</p>
+
+              <p className="mt-6 italic text-sm">
+                Observações: Este documento tem o caráter educativo e protetivo, e não punitivo, garantindo o direito à dignidade, à igualdade e ao respeito de todos os envolvidos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProtocoloBullyingTab() {
+  return (
+    <div className="space-y-8">
+      <div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          Protocolo de atendimento e manejo em casos de Bullying
+        </h1>
+      </div>
+
+      <div className="rounded-2xl p-8 mb-8 bg-white/50 shadow-lg border border-gray-100">
+        <div className="space-y-6 text-gray-900">
+          <p>
+            A escola é um espaço de socialização, onde os estudantes demonstram várias características, muitas dessas não vistas pelas famílias, às vezes por falta de "tempo", de escuta, de olhar. Infelizmente na maioria das vezes o <em>Bullying</em> vem dar suas caras nesse espaço, trazendo consigo, dor, violência, desencorajamento, afetando o bem estar, a saúde mental desencadeando, depressão, ansiedade, isolamento, falta de assiduidade escolar, baixo rendimento escolar e em casos extremos automutilação.
+          </p>
+
+          <p>
+            A escola tem a responsabilidade ética e legal de garantir a segurança e o bem-estar dos alunos, promovendo um ambiente escolar seguro, respeitoso e inclusivo. <strong>A lei nº 13.185/2015</strong> institui o Programa de Combate à Intimidação Sistemática (Bullying), prevê que as instituições de ensino têm o dever de promover campanhas de conscientização e desenvolver planos de ações para combater as intimidações no ambiente escolar e esse é o objetivo com esse projeto.
+          </p>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Definição de Bullying</h3>
+          <p>
+            Bullying é um comportamento agressivo, intencional e repetitivo, praticado por um ou mais indivíduos, que tem como objetivo intimidar, humilhar, ofender, machucar, causar dor e constrangimento na outra pessoa, causando-lhe dor física e/ou emocional.
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Intencionalidade:</strong> não é um acidente, a agressão é proposital;</li>
+            <li><strong>Repetição:</strong> ocorre de forma contínua ou frequente, não é caso isolado;</li>
+            <li><strong>Desequilíbrio de poder:</strong> normalmente há uma relação desigual de forças (físicas, sociais, emocionais ou digitais) entre quem pratica e quem sofre;</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Formas de Bullying</h3>
+          
+          <p><strong>Verbal:</strong> agressões ocorridas por meio da verbalização. Insultar, xingar, ameaçar, apelidar pejorativamente, fofocar e espalhar rumores são formas de Bullying verbal.</p>
+
+          <p><strong>Físico:</strong> agressões realizadas por contato físico, como empurrar, socar, bater, chutar, impedir a passagem, beliscar, puxar o cabelo, etc.</p>
+
+          <p><strong>Social ou relacional:</strong> agressão a reputação social ou status, isolar, ignorar, excluir alguém, prejudicar a imagem do outro, espalhar fofocas e mentiras. Podem também ocorrer por motivos étnicos, raciais ou de inclusão escolar.</p>
+
+          <p><strong>Virtual (Cyberbullying):</strong> danos intencionais e repetitivos por meio das mídias, computadores, celulares e/ ou outro dispositivo eletrônico, com a intenção de depreciar, enviar mensagens intrusivas sobre a intimidade, enviar ou adulterar foto e dados pessoais que resultem em sofrimento ou com o intuito de criar meios de constrangimento psicológico e social. Excluir de grupos em redes sociais com a intenção de ferir o outro, espalhar fofocas e mentiras, criar grupos em redes sociais a fim de prejudicar o outro.</p>
+
+          <p><strong>Material:</strong> o que envolve danos materiais, danificar materiais no geral, rasgar, riscar roupas ou outro pertence.</p>
+
+          <p><strong>Psicológico:</strong> forma subjetiva de vitimizar alguém por meio de atos como extorquir, amedrontar, chantagear, humilhar, perseguir, manipular, intimidar, infernizar.</p>
+
+          <p><strong>Sexual:</strong> assediar, induzir e/ou abusar, fazer brincadeiras de conotação sexual, essa forma de bullying pode envolver as outras formas já mencionadas.</p>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Identificação e comunicação do caso:</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>A quem relatar:</strong> Coordenação disciplinar e orientadora escolar da escola e em casos anônimos, A Caixa do Bullying;</li>
+            <li><strong>Forma de Registro:</strong> Realizar anotação imediata em formulário próprio. (Ficha de ocorrência de Bullying)</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Prevenção e cultura de paz;</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Ações Educativas:</strong> Anualmente o Colégio Elisa Andreoli adota projetos diversificados para trabalhar o Bullying em todos os segmentos, Infantil, Fundamental I, Fundamental II e Ensino Médio. Os professores trabalham o tema em sala de aula com consonância com seus planejamentos. Palestras com profissionais qualificados são disponibilizadas para trazer o tema de forma responsável.</li>
+            <li><strong>Ambiente acolhedor:</strong> O Colégio Elisa Andreoli trabalha constantemente com o objetivo de promover um ambiente acolhedor onde todos se sintam respeitados e seguros.</li>
+            <li><strong>Regras claras:</strong> Aqui no Colégio deixa-se muito claro a toda comunidade escolar que o Bullying não tem vez, o colégio não tolera o Bullying.</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Acolhimento à vítima</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Escuta com atenção, empatia e sigilo;</li>
+            <li>Validar os sentimentos da vítima;</li>
+            <li>Garantir que ela não seja exposta publicamente;</li>
+            <li>Comunicar em seguida a gestão escolar e coordenação pedagógica;</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Encaminhamentos com o suposto autor</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Escuta com atenção, ouvindo a versão dos fatos com serenidade e respeito;</li>
+            <li>Registro das falas na ficha de ocorrência;</li>
+            <li>Explicar de forma adequada que o racismo é inaceitável e ilegal;</li>
+            <li>Aplicar medidas educativas e formativas, nunca apenas punitivas. Tendo como base o regimento interno escolar;</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Ação 2025: Projeto Turma sem Bullying</h3>
+          <p><strong>Estratégias:</strong> Conversas com as turmas, levando a eles as consequências do ato de praticar o Bullying, Jogo Papo da Galera, onde o principal objetivo é fazer os alunos serem protagonistas das próprias mudanças de comportamento.</p>
+          <p><strong>Recurso para denúncia:</strong> Caixa preparada, colocada em um local estratégico, onde a pessoa que sofre Bullying, ou alguém que presencie, pode colocar sem medo ou vergonha. Chamaremos de Caixa do Silêncio Seguro.</p>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Denúncia</h3>
+          <ol className="list-decimal list-inside space-y-2">
+            <li><strong>Recebimento da denúncia:</strong> Designar alguém para ser referência para os alunos;</li>
+            <li>Registrar a denúncia com data, hora, local e tipo de Bullying praticado;</li>
+            <li>Garantir o sigilo protegendo a identidade de quem relatou e dos envolvidos;</li>
+            <li>Classificar o caso, verificar se realmente se trata de Bullying ou algum outro tipo de conflito;</li>
+          </ol>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Avaliação inicial e priorização do caso</h3>
+          <p><strong>Objetivo:</strong> Determinar a gravidade do caso e os riscos imediatos;</p>
+          <p><strong>Ações:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Entender quem são os envolvidos;</li>
+            <li>Analisar o risco físico, emocional grave ou reincidência;</li>
+            <li>Definir se é necessário intervenção urgente (exemplo: afastar temporariamente os envolvidos, chamar as famílias, encaminhar para atendimento ao setor de psicologia);</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Escuta ativa e especializada</h3>
+          <p><strong>Objetivo:</strong> Ouvir todas as partes com respeito e neutralidade.</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Conversar individualmente com a "vítima" autores e testemunhas;</li>
+            <li>Garantir ambiente seguro para a fala, sem julgamentos;</li>
+            <li>Evitar expor o aluno perante os colegas;</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Comunicação com as Famílias</h3>
+          <p><strong>Objetivo:</strong> Informar aos responsáveis de forma ética e colaborativa.</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Marcar reunião separada com as famílias da vítima e dos autores;</li>
+            <li>Explicar os fatos, medidas que serão tomadas e importância do apoio da família;</li>
+            <li>Orientar para não punirem de forma agressiva nem incentivarem retaliações;</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Definição de medidas educativas e de proteção</h3>
+          
+          <h4 className="text-xl font-semibold text-gray-900 mt-4 mb-2">Ações de suporte à vítima</h4>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Acompanhar psicologicamente (escolar ou encaminhamento externo);</li>
+            <li>Garantir rede de apoio entre colegas e equipe escolar;</li>
+            <li>Monitorar ambiente para evitar novos episódios;</li>
+          </ul>
+
+          <h4 className="text-xl font-semibold text-gray-900 mt-4 mb-2">Ações com o autor da agressão</h4>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Conversa reflexiva (focar sempre na empatia e responsabilização, não só punição)</li>
+            <li>Medidas disciplinares pedagógicas: (amarrar com o manual do aluno)</li>
+          </ul>
+          <p className="italic">Obs: Dependendo da gravidade de cada caso: Orientação disciplinar, se repetir conversa com os responsáveis, e em caso de ainda se reincidir, suspensão de um, dois ou três dias levando em consideração os encaminhamentos anteriores.</p>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-6 mb-3">Monitoramento Contínuo</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Acompanhar os alunos envolvidos por pelo menos um período de 60 dias;</li>
+            <li>Registrar novos acontecimentos;</li>
+            <li>Manter os canais de escuta aberto, pessoa referência, Caixa do Silêncio Seguro;</li>
+          </ul>
+
+          <div className="bg-stone-800 p-6 rounded-lg mt-8">
+            <h3 className="text-2xl font-semibold text-white mb-4">Formulário - Caixa Bullying</h3>
+            
+            <div className="space-y-4 text-white">
+              <p><strong>Nome do aluno (a) (Vítima):</strong>_____________________________________________</p>
+              <p><strong>Turma:</strong> _____________________________ <strong>Período:</strong>_____________________________</p>
+
+              <p className="mt-4"><strong>Nome do aluno (a) citado, que pratica o Bullying:</strong></p>
+              <p>___________________________________________________________________</p>
+              <p><strong>Turma:</strong> _____________________________ <strong>Período:</strong>_____________________________</p>
+
+              <p className="mt-4"><strong>Outros envolvidos:</strong> _________________________________________________________________________________________________________________________________</p>
+
+              <p className="mt-4"><strong>Data do bilhete:</strong> ____________________</p>
+
+              <p className="mt-4"><strong>Encaminhamentos:</strong></p>
+              <p className="border border-white/30 p-4 min-h-[200px]"></p>
+
+              <p className="mt-6">São José, _______ de _____________________________ de 2025</p>
+              <p className="mt-4">Caso atendido por:</p>
+              <p>_____________________________________________</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
