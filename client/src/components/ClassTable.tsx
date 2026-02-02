@@ -37,18 +37,18 @@ export default function ClassTable({ data }: ClassTableProps) {
                     Turno
                   </TableHead>
                   <TableHead className="text-black font-bold">
-                    Sala
+                    Turma
                   </TableHead>
-                  <TableHead className="text-right text-black font-bold">
+                  <TableHead className="text-left text-black font-bold">
                     Total
                   </TableHead>
-                  <TableHead className="text-right text-black font-bold">
+                  <TableHead className="text-left text-black font-bold">
                     Masc.
                   </TableHead>
-                  <TableHead className="text-right text-black font-bold">
+                  <TableHead className="text-left text-black font-bold">
                     Fem.
                   </TableHead>
-                  <TableHead className="text-right text-black font-bold">
+                  <TableHead className="text-left text-black font-bold">
                     Outros
                   </TableHead>
                 </TableRow>

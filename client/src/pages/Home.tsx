@@ -125,40 +125,37 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
         </p>
       </div>
 
-      <div className="bg-stone-800 rounded-lg p-8 border border-stone-800 prose prose-invert max-w-none shadow-xl">
-        <div className="mb-8 text-center italic border-l-4  border-blue-500 pl-6 py-4 bg-white/6 rounded-lg">
+      <div className="rounded-2xl p-8 mb-8 bg-white/40 shadow-lg border border-zinc-200">
+        <div className="mb-8 text-center italic border-l-4  border-blue-500 pl-6 py-4 bg-zinc-800 rounded-lg">
           <p className="text-lg text-stone-200">
             "Ensinar é um exercício de imortalidade. De alguma forma continuamos a viver
             naqueles cujos olhos aprenderam a ver o mundo pela magia da nossa palavra.
             O professor, assim, não morre jamais."
           </p>
-          <p className="text-sm text-stone-400 mt-2">— Rubem Alves</p>
+          <p className="text-sm text-stone-300 mt-2">— Rubem Alves</p>
         </div>
 
         <div className="space-y-6">
           <div>
-            <p className="text-stone-300"><strong className="text-stone-50">Data:</strong> 03/02/2026</p>
-            <p className="text-stone-300"><strong className="text-stone-50">Horário:</strong> 9h</p>
+            <p className="text-stone-800"><strong className="text-stone-950">Data:</strong> 03/02/2026</p>
+            <p className="text-stone-800"><strong className="text-stone-950">Horário:</strong> 9h</p>
           </div>
 
-          <div>
-            <ul className="list-disc list-inside space-y-2 text-stone-300">
-              <li>Oração e Reflexão (Capela)</li>
-              <li>Avaliação do ano anterior</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-stone-50 mb-3">Objetivo Geral da nossa reunião:</h3>
-            <p className="text-stone-300">
+           <div>
+            <h3 className="text-xl font-semibold text-stone-800 mb-3">1. Oração e Reflexão</h3>
+            
+            <h3 className="text-xl font-semibold text-stone-800 mb-3"> 2. Avaliação do ano anterior</h3>
+           
+            <h3 className="text-xl font-semibold text-stone-800 mb-3">3. Objetivo Geral da nossa reunião:</h3>
+            <p className="text-stone-800">
               Promover a formação integral dos alunos por meio da implementação de práticas educacionais que integrem valores católicos, 
               desenvolvimento acadêmico e social, fortalecendo a identidade da escola como uma instituição confessional.
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Objetivos Específicos:</h3>
-            <ul className="list-disc list-inside space-y-2 text-foreground">
+            <h3 className="text-xl font-semibold text-stone-800 mb-3">4. Objetivos Específicos:</h3>
+            <ul className="list-disc list-inside space-y-2 text-stone-800">
               <li>Desenvolver e implementar um programa de formação contínua para os educadores, focando na vivência e ensino dos valores católicos, 
               além de estratégias pedagógicas inovadoras que melhorem o aprendizado dos alunos.</li>
               <li>Organizar eventos e atividades comunitárias que envolvam alunos, famílias e a comunidade, promovendo a solidariedade, a fé e a 
@@ -168,8 +165,8 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl">
-            <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">Dinâmica (Zoraia)</h3>
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl">
+            <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">5. Dinâmica (Zoraia)</h3>
             <p className="text-center text-white/90 mb-6 text-lg">Estilos de Liderança</p>
             
             <div className="space-y-6">
@@ -226,35 +223,36 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
                   <li className="flex items-start gap-2"><span className="text-white font-bold">•</span> <span><strong>Desvantagens:</strong> Pode levar à falta de direção e desorganização se a equipe não for autônoma.</span></li>
                 </ul>
               </div>
+              <div className="text-center"> Esses estilos podem ser combinados ou adaptados conforme a situação e a equipe. Cada um tem seu lugar e pode ser eficaz em diferentes contextos!</div>
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Comunicações e informes gerais:</h3>
-            <h4 className="font-semibold text-foreground mb-2">Cenário para 2026 <button onClick={() => onTabChange('overview')} className="text-blue-400 hover:text-blue-300 underline cursor-pointer">(Anexo 1)</button>:</h4>
+            <h3 className="text-xl font-semibold text-zinc-800 mb-3">6. Comunicações e informes gerais:</h3>
+            <h4 className="font-semibold text-zinc-800 mb-2">6.1 Cenário para 2026 <button onClick={() => onTabChange('overview')} className="text-blue-400 hover:text-blue-300 underline cursor-pointer">(Anexo 1)</button>:</h4>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
               <li>
-                <button onClick={() => onTabChange('rematriculation')} className="text-blue-400 hover:text-blue-300 hover:underline cursor-pointer">
+                <button onClick={() => onTabChange('rematriculation')} className="text-zinc-800 hover:text-blue-300 underline hover:underline cursor-pointer">
                   Total Rematrícula
                 </button>
               </li>
               <li>
-                <button onClick={() => onTabChange('new-students')} className="text-blue-400 hover:text-blue-300 hover:underline cursor-pointer">
+                <button onClick={() => onTabChange('new-students')} className="text-zinc-800 hover:text-blue-300 underline hover:underline cursor-pointer">
                   Alunos novos
                 </button>
               </li>
               <li>
-                <button onClick={() => onTabChange('overview')} className="text-blue-400 hover:text-blue-300 hover:underline cursor-pointer">
+                <button onClick={() => onTabChange('overview')} className="text-zinc-800 hover:text-blue-300 underline hover:underline cursor-pointer">
                   Alunos transferidos
                 </button>
               </li>
               <li>
-                <button onClick={() => onTabChange('overview')} className="text-blue-400 hover:text-blue-300 hover:underline cursor-pointer">
+                <button onClick={() => onTabChange('overview')} className="text-zinc-800 hover:text-blue-300 underline hover:underline cursor-pointer">
                   Número de alunos pendentes
                 </button>
               </li>
               <li>
-                <button onClick={() => onTabChange('total-students')} className="text-blue-400 hover:text-blue-300 hover:underline cursor-pointer">
+                <button onClick={() => onTabChange('total-students')} className="text-zinc-800 hover:text-blue-300 underline hover:underline cursor-pointer">
                   Total de alunos
                 </button>
               </li>
@@ -262,8 +260,9 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-2">Novos Atos Normativos publicados em Diário Oficial:</h4>
-            <ul className="list-disc list-inside space-y-2 text-foreground">
+            <h3 className="font-semibold text-zinc-800 mb-2">6.2 Novo Sinal</h3>
+            <h3 className="font-semibold text-zinc-800 mb-2">6.3 Novos Atos Normativos publicados em Diário Oficial:</h3>
+            <ul className="list-disc list-inside space-y-2 text-zinc-800">
               <li><strong>Lei nº 19.708, de 21 de janeiro de 2026:</strong> Institui a Semana Estadual da Pátria e altera o Anexo Único da Lei nº 18.531, 
               de 2022, que consolida as leis que instituem datas e eventos alusivos no âmbito do Estado de Santa Catarina e estabelece o Calendário Oficial 
               do Estado de Santa Catarina. <button onClick={() => onTabChange('resumo-19708')} className="text-blue-400 hover:text-blue-300 underline cursor-pointer">(Anexo 2)</button></li>
@@ -276,20 +275,54 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
           </div>
 
           <div>
-            <ul className="list-disc list-inside space-y-1 text-foreground">
-              <li>Agenda 2026 - Manuais - Site <button onClick={() => onTabChange('manual-infantil')} className="text-blue-400 hover:text-blue-300 underline cursor-pointer">(Anexo 5)</button></li>
-              <li>Primeiro dia de aula, 10/02/2026 - Alunos Novos <button onClick={() => onTabChange('alunos-novos-primeiro-dia')} className="text-blue-400 hover:text-blue-300 underline cursor-pointer">(Anexo 6)</button></li>
-              <li>Primeiro dia de aula, 11/02/2026 <button onClick={() => onTabChange('matutino')} className="text-blue-400 hover:text-blue-300 underline cursor-pointer">(Anexo 7)</button></li>
-              <li className="text-muted-foreground">(DJ no recreio e sorvete)</li>
-            </ul>
+              <h3 className="text-xl font-semibold text-zinc-800 mb-3">
+                <button onClick={() => onTabChange('manual-infantil')} className="text-zinc-800 hover:underline cursor-pointer text-left">
+                  7. Agenda 2026 - Manuais - Site (Anexo 5)
+                </button>
+              </h3>
+              <h3 className="text-xl font-semibold text-zinc-800 mb-3">8. Documentos Importantes</h3>
+                      <ul className="list-disc list-inside space-y-1 text-zinc-800">
+                      <li>Mapa de Professores por turma e disciplina</li>
+                      <li>Acompanhamento Pedagógico (registro)</li>
+                      <li>Ficha de atendimento Pais e Professores - Registro, Alinhamento (combinados)</li>
+                      <li className="text-zinc-800">Protocolos de situações desafiadoras - Racismo e Bullying</li>
+                      </ul>
+                      <p className="text-zinc-800 mt-2 mb-2">Vamos virar a chave, fazer o que importa na ordem certa, com intenção.</p>
+              <h3 className="text-xl font-semibold text-zinc-800 mb-3">
+                <button onClick={() => onTabChange('alunos-novos-primeiro-dia')} className="text-zinc-800 hover:underline cursor-pointer text-left">
+                  9. Primeiro dia de aula, 10/02/2026 - Alunos Novos
+                </button>
+              </h3>
+              <h3 className="text-xl font-semibold text-zinc-800 mb-3">
+                <button onClick={() => onTabChange('matutino')} className="text-zinc-800 hover:underline cursor-pointer text-left">
+                 10. Primeiro dia de aula, 11/02/2026
+                </button>
+                <p>(DJ no recreio e sorvete)</p>
+              </h3>
+
+              <h3 className="text-xl font-semibold text-zinc-800 mb-3">11. Reuniões de Coordenações:</h3>
+              <ul className="list-disc list-inside space-y-1 text-zinc-800">
+                <li>QR code para Lista de Presença;</li>
+                <li>Pauta;</li>
+                <li>Dinâmica;</li>
+                <li>Reunião de pais: passar as orientações;</li>
+                <li>Fazer uma reflexão sobre 2025, ouvir os professores e anotar sugestões para 2026;</li>
+                <li>Planejamento anual (31/03/2026);</li>
+                <li>1º dia de aula, 10/02/2026, alunos novos;</li>
+                <li>1º dia de aula, 11/02/2026;</li>
+                <li>Entrega de material (registrar)</li>
+                <li>Uso obrigatório do material didático.</li>
+              </ul>
+
+
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl">
-            <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">Semana Pedagógica 2026</h3>
+          <div className="bg-zinc-800 p-8 rounded-xl shadow-2xl">
+            <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">12. Semana Pedagógica 2026</h3>
             
             <div className="space-y-8">
               {/* Quarta-feira Manhã */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">04/02 (QUARTA-FEIRA) - PERÍODO MATUTINO</h4>
                 <ul className="space-y-2 text-white/90 ml-4">
                   <li className="flex items-start gap-2"><span className="text-white font-bold">8h:</span> <span>Celebração Eucarística (Igreja São Judas Tadeu)</span></li>
@@ -299,7 +332,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
                 </ul>
 
                 {/* Palestrante Ir. Valdete */}
-                <div className="mt-6 bg-white/5 rounded-lg p-6 border border-white/10">
+                <div className="mt-6 bg-white/10 rounded-lg p-6 border border-white/10">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-shrink-0">
                       <img 
@@ -322,7 +355,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
               </div>
 
               {/* Quarta-feira Tarde */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">04/02 (QUARTA-FEIRA) - PERÍODO VESPERTINO</h4>
                 <ul className="space-y-2 text-white/90 ml-4">
                   <li className="flex items-start gap-2"><span className="text-white font-bold">13h30min:</span> <span>Reunião com os novos professores</span></li>
@@ -349,7 +382,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
               </div>
 
               {/* Quinta-feira */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">05/02 (QUINTA-FEIRA) - PERÍODO INTEGRAL</h4>
                 <div className="text-white/90 ml-4">
                   <p className="text-lg"><span className="text-white font-bold">JORNADA PEDAGÓGICA SINEPE</span></p>
@@ -358,7 +391,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
               </div>
 
               {/* Sexta-feira Manhã */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">06/02 (SEXTA-FEIRA) - PERÍODO MATUTINO</h4>
                 <ul className="space-y-2 text-white/90 ml-4 mb-6">
                   <li className="flex items-start gap-2"><span className="text-white font-bold">8h:</span> <span>Jeciane Golinhaki</span></li>
@@ -366,7 +399,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
                 </ul>
 
                 {/* Palestrante Jeciane */}
-                <div className="mt-6 bg-white/5 rounded-lg p-6 border border-white/10">
+                <div className="mt-6 bg-white/10 rounded-lg p-6 border border-white/10">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-shrink-0">
                       <img 
@@ -386,7 +419,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
               </div>
 
               {/* Sexta-feira Tarde */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="bg-blue-500 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h4 className="text-2xl font-bold text-white mb-4 border-b border-white/30 pb-2">06/02 (SEXTA-FEIRA) - PERÍODO VESPERTINO</h4>
                 <ul className="space-y-2 text-white/90 ml-4 mb-6">
                   <li className="flex items-start gap-2"><span className="text-white font-bold">14h:</span> <span>Juliana Miranda</span></li>
@@ -394,7 +427,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
                 </ul>
 
                 {/* Palestrante Juliana */}
-                <div className="mt-6 bg-white/5 rounded-lg p-6 border border-white/10">
+                <div className="mt-6 bg-white/10 rounded-lg p-6 border border-white/10">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-shrink-0">
                       <img 
@@ -415,8 +448,8 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl">
-            <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">Diretrizes para 2026</h3>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl">
+            <h3 className="text-4xl text-center font-bold text-white mb-8 mt-2 tracking-tight">13. Diretrizes para 2026</h3>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <ul className="space-y-3 text-white/90">
@@ -426,7 +459,7 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-white font-bold mt-0.5">•</span>
-                  <span>Os supervisores em 2026 deverão criar uma planilha onde deverão registrar e acompanhar os planejamentos, as avaliações e o controle 
+                  <span>Os supervisores em 2026 deverão criar uma planilha para registrar e acompanhar os planejamentos, as avaliações e o controle 
                   do material didático. A planilha deverá ser compartilhada com as Coordenações e Direção.</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -447,8 +480,8 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl">
-            <h3 className="text-3xl font-bold text-white mb-4">13. Eventos de 2026</h3>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl">
+            <h3 className="text-3xl font-bold text-white mb-4">14. Eventos de 2026</h3>
             <p className="text-white/90 mb-6">Para cada evento deverá ser elaborado um projeto. Após o evento deverá ser feita a prestação de contas.</p>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -456,8 +489,8 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
                 <li><strong>02/04:</strong> Retiro dos funcionários: (Josiane / Equipe SOR / Direção)</li>
                 <li><strong>22/04 até 24/04:</strong> Semana Literária (Coordenações e Direção)</li>
                 <li><strong>25/04:</strong> Encontro Movimento Reparação – Matutino (Equipe SOR / Disciplina / Josiane / Direção)</li>
-                <li><strong>04/05 e 05/05:</strong> Homenagem as mães Infantil: (Coord. Simone e Direção)</li>
-                <li><strong>04/05 até 07/05:</strong> Homenagem as mães Fundamental I: (Coord. Andréia e Direção)</li>
+                <li><strong>04/05 e 05/05:</strong> Homenagem às mães Infantil: (Coord. Simone e Direção)</li>
+                <li><strong>04/05 até 07/05:</strong> Homenagem às mães Fundamental I: (Coord. Andréia e Direção)</li>
                 <li><strong>09/05:</strong> Dia das Mães no cinema (Coordenadora Carol e Direção)</li>
                 <li><strong>19/06:</strong> Festa Junina (Fund. II e Ensino Médio): Colégio Elisa Andreoli (Coord. Fund. II e E.M. / Direção)</li>
                 <li><strong>04/07:</strong> JICEA (Coord. Carlos, Fernando e Carol) / (S2)</li>
@@ -487,8 +520,8 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
-            <h3 className="text-3xl font-bold text-white mb-4">14. Setor de Psicologia / Psicopedagogia - Inclusão</h3>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">15. Setor de Psicologia / Psicopedagogia - Inclusão</h3>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90 mb-4">Em 2026, permanece duas frente da Psicologia / Psicopedagogia - Inclusão:</p>
               <ul className="space-y-2 text-white/90 list-disc list-inside">
@@ -498,8 +531,8 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
-            <h3 className="text-3xl font-bold text-white mb-4">15. Projetos 2026</h3>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">16. Projetos 2026</h3>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90 mb-4">Todos os projetos deverão possuir registro fotográfico e avaliação, que deverão ser entregues à Direção Pedagógica após a sua realização.</p>
               <ul className="space-y-2 text-white/90 list-disc list-inside">
@@ -516,8 +549,8 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
-            <h3 className="text-3xl font-bold text-white mb-4">16. Encaminhamentos: Serviços Social, Psicologia e Psicopedagogia</h3>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">17. Encaminhamentos: Serviços Social, Psicologia e Psicopedagogia</h3>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90 mb-4">Os alunos encaminhados à Assistente Social e aos Setores de Psicologia e Psicopedagogia deverão ter autorização da Direção. Os coordenadores deverão solicitar à Assistente Social a relação de bolsistas (doc. Sigiloso).</p>
               <p className="text-white font-bold mb-4">IMPORTANTE: OS SETORES SÓ PODERÃO ATENDER MEDIANTE O PROTOCOLO ASSINADO PELA DIREÇÃO PEDAGÓGICA.</p>
@@ -525,34 +558,34 @@ function PautaTab({ onTabChange }: { onTabChange: (tab: string) => void }) {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
-            <h3 className="text-3xl font-bold text-white mb-4">17. Reuniões Pedagógicas</h3>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">18. Reuniões Pedagógicas</h3>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <p className="text-white/90">Nas segundas-feiras, às 9h, acontecerá as reuniões Pedagógicas.</p>
+              <p className="text-white/90">Nas segundas-feiras, às 10h, acontecerão as reuniões Pedagógicas.</p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
-            <h3 className="text-3xl font-bold text-white mb-4">18. Reunião Setor de Inclusão e Psicologia</h3>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">19. Reunião Setor de Inclusão e Psicologia</h3>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90">O Setor de Inclusão e Psicologia fará reunião todas as terças-feiras, às 9h.</p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/90 to-blue-800/90 p-8 rounded-xl shadow-2xl mt-6">
-            <h3 className="text-3xl font-bold text-white mb-4">19. Reunião de Gestores</h3>
+          <div className="bg-blue-500 p-8 rounded-xl shadow-2xl mt-6">
+            <h3 className="text-3xl font-bold text-white mb-4">20. Reunião de Gestores</h3>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <p className="text-white/90">Nas quartas-feiras, acontecerá nossa reunião de gestores será às 14h.</p>
             </div>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-border">
-            <p className="text-center italic text-muted-foreground">
+          <div className="mt-8 pt-6 border-t border-zinc-800/20">
+            <p className="text-center italic text-zinc-800">
               "Se algumas vezes teus esforços parecerem em vão, recomeça com mais amor."
             </p>
-            <p className="text-center text-sm text-muted-foreground mt-2">— Madre Elisa Andreoli</p>
-            <p className="text-center text-foreground mt-6 font-semibold">Zoraia J. Rabelo da Silveira</p>
-            <p className="text-center text-muted-foreground">Diretora Pedagógica</p>
+            <p className="text-center text-sm text-zinc-800 mt-2">— Madre Elisa Andreoli</p>
+            <p className="text-center text-zinc-800 mt-6 font-semibold">Zoraia J. Rabelo da Silveira</p>
+            <p className="text-center text-zinc-800">Diretora Pedagógica</p>
           </div>
         </div>
       </div>
@@ -1143,10 +1176,10 @@ function ManualInfantilTab() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold text-foreground mb-2">
+        <h1 className="text-4xl font-bold text-zinc-800 mb-2">
           Manual do Aluno - Infantil
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-zinc-800">
           Informações importantes para alunos da Educação Infantil
         </p>
       </div>
@@ -1166,10 +1199,10 @@ function ManualFundamentalTab() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold text-foreground mb-2">
+        <h1 className="text-4xl font-bold text-zinc-800 mb-2">
           Manual do Aluno
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-zinc-800">
           Informações importantes para alunos do Fundamental e Médio
         </p>
       </div>
@@ -1628,7 +1661,7 @@ function MatutinoTab() {
               <ul className="space-y-1 text-white">
                 <li>1ª aula: 8h às 8h45min</li>
                 <li>2ª aula: 8h45min às 9h30min</li>
-                <li className="font-semibold text-primary">RECREIO: 9h30min às 9h50min</li>
+                <li className="font-semibold text-yellow-400">RECREIO: 9h30min às 9h50min</li>
                 <li>3ª aula: 9h50min às 10h35min</li>
                 <li>4ª aula: 10h35min às 11h20min</li>
                 <li>5ª aula: 11h20min às 12h05min</li>
@@ -1641,7 +1674,7 @@ function MatutinoTab() {
                 <li>1ª aula: 7h15min às 8h</li>
                 <li>2ª aula: 8h às 8h45min</li>
                 <li>3ª aula: 8h45min às 9h30min</li>
-                <li className="font-semibold text-primary">RECREIO: 9h30min às 9h50min</li>
+                <li className="font-semibold text-yellow-400">RECREIO: 9h30min às 9h50min</li>
                 <li>4ª aula: 9h50min às 10h35min</li>
                 <li>5ª aula: 10h35min às 11h20min</li>
                 <li>6ª aula: 11h20min às 12h05min</li>
@@ -1703,25 +1736,7 @@ function VespertinoTab() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Depois do recreio, o professor deverá:</h3>
-            <ul className="list-disc list-inside space-y-2 text-foreground">
-              <li>Conferir a chamada utilizando a lista de alunos, e comunicar ao Inspetor Disciplinar se ainda não estiver regularizada: número-nome de alunos em sala de acordo com a listagem.</li>
-              <li>A lista deve permanecer na sala, e o professor da última aula deve entregá-la ao Inspetor Disciplinar de sua ala.</li>
-              <li>Acolher os alunos.</li>
-              <li>Orientar sobre as novas regras para o uso dos aparelhos eletrônicos (Vídeo Direção);</li>
-              <li>Frisar a importância do <em>CLIPESCOLA</em> para a comunicação família-escola;</li>
-              <li>O uso do <em>CLIPESCOLA</em> é obrigatório.</li>
-              <li>Passar os horários de entrada, saída e recreio.</li>
-              <li>Passar os horários de aula. (REGISTRAR A LÁPIS)</li>
-              <li>Abrir o <em>site</em> do Colégio na lousa e conversar sobre o Manual do Aluno.</li>
-              <li>Os Professores devem explicitar, em sua 1ª aula, os critérios de avaliação de sua disciplina.</li>
-            </ul>
-          </div>
-
-          <div className="text-center py-6">
-            <p className="text-2xl font-bold text-primary">BOM ANO!</p>
-          </div>
+          
 
           <div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Depois do recreio, o professor deverá:</h3>
