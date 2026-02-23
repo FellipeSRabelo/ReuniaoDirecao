@@ -2003,7 +2003,7 @@ function ProtocoloBullyingTab() {
           <ul className="list-disc list-inside space-y-2">
             <li>Escuta com atenção, ouvindo a versão dos fatos com serenidade e respeito;</li>
             <li>Registro das falas na ficha de ocorrência;</li>
-            <li>Explicar de forma adequada que o racismo é inaceitável e ilegal;</li>
+            <li>Explicar de forma adequada que o Bullying é inaceitável e ilegal;</li>
             <li>Aplicar medidas educativas e formativas, nunca apenas punitivas. Tendo como base o regimento interno escolar;</li>
           </ul>
 
